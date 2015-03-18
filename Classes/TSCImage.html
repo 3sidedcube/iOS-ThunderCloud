@@ -1,365 +1,507 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>TSCImage Class Reference</title>
-		<meta id="xcode-display" name="xcode-display" content="render"/>
-		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
-		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
-	</head>
-	<body>
-		<header id="top_header">
-			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">ThunderCloud </a></h1>
-				<a id="developerHome" href="../index.html">3 SIDED CUBE DESIGN LTD</a>
-			</div>
+<head>
+	<meta charset="utf-8">
+
+	<title>TSCImage Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
 			
-			<div id="title" role="banner">
-				<h1 class="hideInXcode">TSCImage Class Reference</h1>
-			</div>
-			<ul id="headerButtons" role="toolbar">
-				<li id="toc_button">
-					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
-				</li>
-				<li id="jumpto_button" role="navigation">
-					<select id="jumpTo">
+			<h1 id="library-title">
+				<a href="../index.html">ThunderCloud </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">3 SIDED CUBE DESIGN LTD.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
 	
+
 	
 	
 	<option value="tasks">Tasks</option>
 	
 	
+
 	
 	
+
 	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/imageWithDictionary:">+ imageWithDictionary:</option>
+		
+		<option value="//api/name/imageWithJSONObject:">+ imageWithJSONObject:</option>
+		
+	</optgroup>
 	
+
 	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/imageWithDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;+ imageWithDictionary:</option>
-	
-	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/applyDarkEffectAtFrame:">&nbsp;&nbsp;&nbsp;&nbsp;- applyDarkEffectAtFrame:</option>
-	
-	<option value="//api/name/applyExtraLightEffectAtFrame:">&nbsp;&nbsp;&nbsp;&nbsp;- applyExtraLightEffectAtFrame:</option>
-	
-	<option value="//api/name/applyLightEffectAtFrame:">&nbsp;&nbsp;&nbsp;&nbsp;- applyLightEffectAtFrame:</option>
-	
-	<option value="//api/name/applyTintEffectWithColor:atFrame:">&nbsp;&nbsp;&nbsp;&nbsp;- applyTintEffectWithColor:atFrame:</option>
-	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/applyDarkEffectAtFrame:">- applyDarkEffectAtFrame:</option>
+		
+		<option value="//api/name/applyExtraLightEffectAtFrame:">- applyExtraLightEffectAtFrame:</option>
+		
+		<option value="//api/name/applyLightEffectAtFrame:">- applyLightEffectAtFrame:</option>
+		
+		<option value="//api/name/applyTintEffectWithColor:atFrame:">- applyTintEffectWithColor:atFrame:</option>
+		
+	</optgroup>
 	
 	
 </select>
-				</li>
-			</ul>
-		</header>
-		<nav id="tocContainer" class="isShowingTOC">
-			<ul id="toc" role="tree">
-				
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
 
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">TSCImage Class Reference</h1>
 
-
-<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
-	
-</ul></li>
-
-
-
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageWithDictionary:">imageWithDictionary:</a></span></li>
-	
-</ul></li>
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applyDarkEffectAtFrame:">applyDarkEffectAtFrame:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applyExtraLightEffectAtFrame:">applyExtraLightEffectAtFrame:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applyLightEffectAtFrame:">applyLightEffectAtFrame:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applyTintEffectWithColor:atFrame:">applyTintEffectWithColor:atFrame:</a></span></li>
-	
-</ul></li>
-
-
-			</ul>
-		</nav>
-		<article>
-			<div id="contents" class="isShowingTOC" role="main">
-				<a title="TSCImage Class Reference" name="top"></a>
-				<div class="main-navigation navigation-top">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="header">
-					<div class="section-header">
-						<h1 class="title title-header">TSCImage Class Reference</h1>
-					</div>		
-				</div>
-				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UIImage</td>
+	<th>Inherits from</th>
+	<td>UIImage</td>
 </tr><tr>
-	<td class="specification-title">Declared in</td>
-	<td class="specification-value">TSCImage.h</td>
+	<th>Declared in</th>
+	<td>TSCImage.h<br />TSCImage.m</td>
 </tr>
 						</tbody></table></div>
 					
-                    
+
                     
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A helper class for intiailizing <code>UIImage</code>s from their CMS representatioon and applying visual effects to images</p>
+					</div>
+					
+					
+
 					
 					
 					<div class="section section-tasks">
 						<a title="Tasks" name="tasks"></a>
-						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
-						
+
 						
 						
 
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/imageWithDictionary:">+&nbsp;imageWithDictionary:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/applyLightEffectAtFrame:">&ndash;&nbsp;applyLightEffectAtFrame:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/applyExtraLightEffectAtFrame:">&ndash;&nbsp;applyExtraLightEffectAtFrame:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/applyDarkEffectAtFrame:">&ndash;&nbsp;applyDarkEffectAtFrame:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/applyTintEffectWithColor:atFrame:">&ndash;&nbsp;applyTintEffectWithColor:atFrame:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-					</div>
-					
-					
-					
-					
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/imageWithDictionary:" title="imageWithDictionary:"></a>
-	<h3 class="subsubtitle method-title">imageWithDictionary:</h3>
-	
-	
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/imageWithJSONObject:" title="imageWithJSONObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/imageWithJSONObject:">+&nbsp;imageWithJSONObject:</a></code>
+</h3>
 
-	<div class="method-subsection method-declaration"><code>+ (UIImage *)imageWithDictionary:(NSDictionary *)<em>dictionary</em></code></div>
+	<div class="method-info">
+		<div class="pointy-thing"></div>
 
-    
-</div>
-						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/applyDarkEffectAtFrame:" title="applyDarkEffectAtFrame:"></a>
-	<h3 class="subsubtitle method-title">applyDarkEffectAtFrame:</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>- (UIImage *)applyDarkEffectAtFrame:(CGRect)<em>frame</em></code></div>
-
-    
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/applyExtraLightEffectAtFrame:" title="applyExtraLightEffectAtFrame:"></a>
-	<h3 class="subsubtitle method-title">applyExtraLightEffectAtFrame:</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>- (UIImage *)applyExtraLightEffectAtFrame:(CGRect)<em>frame</em></code></div>
-
-    
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/applyLightEffectAtFrame:" title="applyLightEffectAtFrame:"></a>
-	<h3 class="subsubtitle method-title">applyLightEffectAtFrame:</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>- (UIImage *)applyLightEffectAtFrame:(CGRect)<em>frame</em></code></div>
-
-    
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/applyTintEffectWithColor:atFrame:" title="applyTintEffectWithColor:atFrame:"></a>
-	<h3 class="subsubtitle method-title">applyTintEffectWithColor:atFrame:</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>- (UIImage *)applyTintEffectWithColor:(UIColor *)<em>tintColor</em> atFrame:(CGRect)<em>frame</em></code></div>
-
-    
-</div>
-						
-					</div>
-					
-					
-                    
-                    
-				</div>
-				<div class="main-navigation navigation-bottom">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="footer">
-					<hr />
-					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 3 SIDED CUBE DESIGN LTD. All rights reserved. (Last updated: 2014-11-11)</span><br />
-						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
-						
-					</div>
-				</div>
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Takes a JSON object and returns the image from the bundle</p>
 			</div>
-		</article>
-		<script type="text/javascript">
-			function jumpToChange()
-			{
-				window.location.hash = this.options[this.selectedIndex].value;
-			}
 			
-			function toggleTOC()
-			{
-				var contents = document.getElementById('contents');
-				var tocContainer = document.getElementById('tocContainer');
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (UIImage *)imageWithJSONObject:(NSObject *)<em>object</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
 				
-				if (this.getAttribute('class') == 'open')
-				{
-					this.setAttribute('class', '');
-					contents.setAttribute('class', '');
-					tocContainer.setAttribute('class', '');
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>A JSON object of storm data to create the image with</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Takes a JSON object and returns the image from the bundle</p><p>This image will consider the device scale and find the right image</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TSCImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/imageWithDictionary:" title="imageWithDictionary:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/imageWithDictionary:">+&nbsp;imageWithDictionary:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes a new instance from a CMS representation of an image</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (UIImage *)imageWithDictionary:(NSDictionary *)<em>dictionary</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dictionary</code></th>
+						<td><p>The dictionary to create an image from</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes a new instance from a CMS representation of an image</p><p>This will pull out the correct image from the dictionary for use on a particular scale display (@1x, @2x, @3x)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TSCImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/applyLightEffectAtFrame:" title="applyLightEffectAtFrame:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyLightEffectAtFrame:">&ndash;&nbsp;applyLightEffectAtFrame:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds a light blur effect to a frame within the image</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIImage *)applyLightEffectAtFrame:(CGRect)<em>frame</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>frame</code></th>
+						<td><p>The frame over which to apply the light blur</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Adds a light blur effect to a frame within the image</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TSCImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/applyExtraLightEffectAtFrame:" title="applyExtraLightEffectAtFrame:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyExtraLightEffectAtFrame:">&ndash;&nbsp;applyExtraLightEffectAtFrame:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds an extra light blur effect to a frame within the image</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIImage *)applyExtraLightEffectAtFrame:(CGRect)<em>frame</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>frame</code></th>
+						<td><p>The frame over which to apply the extra light blur</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Adds an extra light blur effect to a frame within the image</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TSCImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/applyDarkEffectAtFrame:" title="applyDarkEffectAtFrame:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyDarkEffectAtFrame:">&ndash;&nbsp;applyDarkEffectAtFrame:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds an dark blur effect to a frame within the image</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIImage *)applyDarkEffectAtFrame:(CGRect)<em>frame</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>frame</code></th>
+						<td><p>The frame over which to apply the dark  blur</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Adds an dark blur effect to a frame within the image</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TSCImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/applyTintEffectWithColor:atFrame:" title="applyTintEffectWithColor:atFrame:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyTintEffectWithColor:atFrame:">&ndash;&nbsp;applyTintEffectWithColor:atFrame:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds an tint effect to a frame within the image</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIImage *)applyTintEffectWithColor:(UIColor *)<em>tintColor</em> atFrame:(CGRect)<em>frame</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tintColor</code></th>
+						<td><p>The colour to tint the area of the image with</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>frame</code></th>
+						<td><p>The frame over which to apply the tint</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Adds an tint effect to a frame within the image</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TSCImage.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
 					
-					window.name = "hideTOC";
-				}
-				else
-				{
-					this.setAttribute('class', 'open');
-					contents.setAttribute('class', 'isShowingTOC');
-					tocContainer.setAttribute('class', 'isShowingTOC');
 					
-					window.name = "";
-				}
-				return false;
-			}
-			
-			function toggleTOCEntryChildren(e)
-			{
-				e.stopPropagation();
-				var currentClass = this.getAttribute('class');
-				if (currentClass == 'children') {
-					this.setAttribute('class', 'children open');
-				}
-				else if (currentClass == 'children open') {
-					this.setAttribute('class', 'children');
-				}
-				return false;
-			}
-			
-			function tocEntryClick(e)
-			{
-				e.stopPropagation();
-				return true;
-			}
-			
-			function init()
-			{
-				var selectElement = document.getElementById('jumpTo');
-				selectElement.addEventListener('change', jumpToChange, false);
-				
-				var tocButton = document.getElementById('table_of_contents');
-				tocButton.addEventListener('click', toggleTOC, false);
-				
-				var taskTreeItem = document.getElementById('task_treeitem');
-				if (taskTreeItem.getElementsByTagName('li').length > 0)
-				{
-					taskTreeItem.setAttribute('class', 'children');
-					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
-				}
-				
-				var tocList = document.getElementById('toc');
-				
-				var tocEntries = tocList.getElementsByTagName('li');
-				for (var i = 0; i < tocEntries.length; i++) {
-					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
-				}
-				
-				var tocLinks = tocList.getElementsByTagName('a');
-				for (var i = 0; i < tocLinks.length; i++) {
-					tocLinks[i].addEventListener('click', tocEntryClick, false);
-				}
-				
-				if (window.name == "hideTOC") {
-					toggleTOC.call(tocButton);
-				}
-			}
-			
-			window.onload = init;
-			
-			// If showing in Xcode, hide the TOC and Header
-			if (navigator.userAgent.match(/xcode/i)) {
-				document.getElementById("contents").className = "hideInXcode"
-				document.getElementById("tocContainer").className = "hideInXcode"
-				document.getElementById("top_header").className = "hideInXcode"
-			}
-			
-		</script>
-	</body>
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 3 SIDED CUBE DESIGN LTD. All rights reserved. Updated: 2015-03-18</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
 </html>
