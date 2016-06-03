@@ -7,7 +7,7 @@
 //
 
 #import "TSCVideoListItemViewCell.h"
-#import "TSCVideo.h"
+@class TSCVideo;
 
 /**
  The cell that represents a multi video item
@@ -24,5 +24,9 @@
  */
 @property (nonatomic, strong) TSCVideo * _Nullable video;
 
+/**
+ The button which can be used to switch the video the cell is playing
+ */
+@property (nonatomic, strong) UIButton * _Nonnull switchVideoButton;
 
 @end

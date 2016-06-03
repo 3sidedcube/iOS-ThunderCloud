@@ -55,10 +55,6 @@
     cell = (TSCVideoListItemViewCell *)[super tableViewCell:cell];
     cell.duration = self.duration;
     
-    if ([self.link.linkClass isEqualToString:@"ExternalLink"]){
-        [cell.playerView loadWithVideoId:@"oyRPpnshiw4"];
-    }
-    
     return cell;
 }
 

@@ -20,11 +20,7 @@
         self.playButton = [UIButton new];
         [self.playButton setImage:[UIImage imageNamed:@"mediaPauseButton" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         [self addSubview:self.playButton];
-        
-        self.languageButton = [UIButton new];
-        [self.languageButton setImage:[UIImage imageNamed:@"mediaLanguageButton" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-        [self addSubview:self.languageButton];
-        
+
         self.volumeView = [MPVolumeView new];
         
         [self addSubview:self.volumeView];
@@ -42,13 +38,11 @@
     if (UIInterfaceOrientationIsPortrait(orientation)) {
         
         self.playButton.frame = CGRectMake((self.frame.size.width / 2) - 50, 10, 24, 26);
-        self.languageButton.frame = CGRectMake((self.frame.size.width / 2) + 20, 10, 24, 26);
         self.volumeView.frame = CGRectMake(44, self.bounds.size.height - 30, self.bounds.size.width - 88, 22);
         
     } else if (UIInterfaceOrientationIsLandscape(orientation)) {
         
         self.playButton.frame = CGRectMake((self.center.x), 7, 24, 26);
-        self.languageButton.frame = CGRectMake(self.frame.size.width - 45, 7, 24, 26);
         self.volumeView.frame = CGRectMake(20, self.bounds.size.height - 30, (self.bounds.size.width / 2) - 50, 22);
     }
 }

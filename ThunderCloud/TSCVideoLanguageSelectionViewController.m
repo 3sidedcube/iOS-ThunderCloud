@@ -45,6 +45,7 @@
 - (void)videoSelected:(TSCTableSelection *)selectedVideo
 {
     [self.videoSelectionDelegate videoLanguageSelectionViewController:self didSelectVideo:(TSCVideo *)selectedVideo.object];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 @end
