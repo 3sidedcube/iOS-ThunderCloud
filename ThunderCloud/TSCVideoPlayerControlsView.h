@@ -24,9 +24,4 @@
  */
 @property (nonatomic, strong) UIButton *playButton;
 
-/**
- Where multiple languages are available, this button is available for choosing the video in an alternative language
- */
-@property (nonatomic, strong) UIButton *languageButton;
-
 @end

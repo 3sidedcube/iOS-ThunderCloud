@@ -17,7 +17,7 @@
 
 @import ThunderBasics;
 
-@interface TSCMultiVideoPlayerViewController () <TSCVideoLanguageSelectionViewControllerDelegate>
+@interface TSCMultiVideoPlayerViewController ()
 
 @property (nonatomic, strong) TSCLink *retryYouTubeLink;
 @property (nonatomic, readwrite) BOOL dontReload;
@@ -48,7 +48,6 @@
         
         self.playerControlsView = [TSCVideoPlayerControlsView new];
         [self.playerControlsView.playButton addTarget:self action:@selector(playPause:) forControlEvents:UIControlEventTouchUpInside];
-        [self.playerControlsView.languageButton addTarget:self action:@selector(changeLanguage:) forControlEvents:UIControlEventTouchUpInside];
         
         self.videoScrubView = [TSCVideoScrubViewController new];
         [self.videoScrubView.videoProgressTracker addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -139,7 +138,7 @@
         
         if ([video.videoLocale isEqual:[TSCStormLanguageController sharedController].currentLocale]) {
             
-            if([video.videoLink.linkClass isEqualToString:@"ExternalLink"]){
+            if ([video.videoLink.linkClass isEqualToString:@"ExternalLink"]){
                 
                 [self loadYoutubeVideoForLink:video.videoLink];
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"TSCStatEventNotification" object:self userInfo:@{@"type":@"event", @"category":@"Video", @"action":[NSString stringWithFormat:@"YouTube - %@", video.videoLink.url.absoluteString]}];
@@ -247,7 +246,6 @@
     }
 }
 
-#pragma mark - Video selection delegate
 
 - (void)videoLanguageSelectionViewController:(TSCVideoLanguageSelectionViewController *)view didSelectVideo:(TSCVideo *)video
 {
@@ -291,15 +289,6 @@
         [sender setImage:[UIImage imageNamed:@"mediaPlayButton" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         [self.player pause];
     }
-}
-
-- (void)changeLanguage:(UIButton *)sender
-{
-    TSCVideoLanguageSelectionViewController *selectedLanguageView = [[TSCVideoLanguageSelectionViewController alloc] initWithVideos:self.videos];
-    selectedLanguageView.videoSelectionDelegate = self;
-    
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:selectedLanguageView];
-    [self presentViewController:navController animated:YES completion:nil];
 }
 
 #pragma mark - Youtube URL osurcing
