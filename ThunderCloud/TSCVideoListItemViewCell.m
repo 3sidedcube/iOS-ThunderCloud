@@ -9,7 +9,7 @@
 #import "TSCVideoListItemViewCell.h"
 #import "TSCAnnularPlayButton.h"
 
-@interface TSCVideoListItemViewCell ()
+@interface TSCVideoListItemViewCell () <YTPlayerViewDelegate>
 
 @property (nonatomic, strong) UILabel *durationLabel;
 
@@ -30,6 +30,10 @@
         self.gradientImageView.image = [UIImage imageNamed:@"NameLabel-bg" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
 
         [self.contentView addSubview:self.gradientImageView];
+
+        self.playerView = [YTPlayerView new];
+        self.playerView.delegate = self;
+        [self.contentView insertSubview:self.playerView atIndex:0];
         
         self.durationLabel = [[UILabel alloc] init];
         self.durationLabel.textColor = [UIColor whiteColor];
@@ -51,6 +55,7 @@
     self.playButton.center = self.contentView.center;
     self.playButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.playButton startAnimationWithDelay:0.2];
+    self.playerView.frame = self.bounds;
     
     float durationLabelInset = 5;
     
@@ -72,6 +77,26 @@
         [self.cellTextLabel removeFromSuperview];
         [self.gradientImageView removeFromSuperview];
     }
+}
+
+- (void)prepareForReuse
+{
+    [self.playerView removeFromSuperview];
+    [self.contentView insertSubview:self.playerView atIndex:0];
+}
+
+- (UIView *)playerViewPreferredInitialLoadingView:(YTPlayerView *)playerView
+{
+    return self.gradientImageView;
+}
+
+- (void)playerViewDidBecomeReady:(nonnull YTPlayerView *)playerView;
+{
+    self.playerView.alpha = 0.0;
+    [UIView animateWithDuration:0.4 animations:^{
+        [self.contentView bringSubviewToFront:self.playerView];
+        self.playerView.alpha = 1.0;
+    }];
 }
 
 - (void)setupDurationLabelText
