@@ -10,3 +10,6 @@
 	path = ThunderRequest
 	url = https://github.com/3sidedcube/iOS-ThunderRequest.git
 	branch = develop
+[submodule "YouTube API"]
+	path = YouTube API
+	url = git@github.com:youtube/youtube-ios-player-helper.git

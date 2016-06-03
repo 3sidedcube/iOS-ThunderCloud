@@ -11,6 +11,38 @@
 #import "TSCMultiVideoListItemViewCell.h"
 #import "TSCAnnularPlayButton.h"
 #import "UINavigationController+TSCNavigationController.h"
+#import "TSCStormLanguageController.h"
+#import "TSCLink.h"
+
+@interface TSCLink (YouTube)
+
+- (NSString  * _Nullable)youtubeVideoId;
+
+@end
+
+@implementation TSCLink (YouTube)
+
+- (NSString *)youtubeVideoId
+{
+    if (![self.linkClass isEqualToString:@"ExternalLink"] || !self.url.absoluteString || ![self.url.absoluteString containsString:@"youtube.com"]) {
+        return nil;
+    }
+    
+    NSURLComponents *components = [NSURLComponents componentsWithURL:self.url resolvingAgainstBaseURL:false];
+    __block NSString *identifier;
+    
+    [components.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+        if ([obj.name isEqualToString:@"v"] && obj.value) {
+            identifier = obj.value;
+            *stop = true;
+        }
+    }];
+    
+    return identifier;
+}
+
+@end
 
 @implementation TSCVideoListItem
 
@@ -57,6 +89,27 @@
 - (TSCMultiVideoListItemViewCell *)tableViewCell:(TSCMultiVideoListItemViewCell *)cell
 {
     self.parentNavigationController = cell.parentViewController.navigationController;
+    
+    NSString *youtubeVideoId;
+    
+    for (TSCVideo *video in self.videos) {
+        
+        if ([video.videoLocale isEqual:[TSCStormLanguageController sharedController].currentLocale]) {
+            youtubeVideoId = [video.videoLink youtubeVideoId];
+        }
+    }
+    
+    if (!youtubeVideoId && self.videos.firstObject) {
+        youtubeVideoId = [((TSCVideo *)self.videos.firstObject).videoLink youtubeVideoId];
+    }
+    
+    if (youtubeVideoId) {
+        [cell.playerView loadWithVideoId:youtubeVideoId playerVars:@{@"playsinline":@1}];
+        cell.playButton.hidden = true;
+    } else {
+        [cell.playerView.webView removeFromSuperview];
+        cell.playButton.hidden = false;
+    }
     
     return cell;
 }

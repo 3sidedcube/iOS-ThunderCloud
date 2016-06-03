@@ -9,6 +9,7 @@
 @class TSCAnnularPlayButton;
 
 @import ThunderTable;
+@import YouTubeiOSPlayerHelper;
 
 /**
  The cell that displays an image and play animated play button to let the user know there is a video to play
@@ -24,5 +25,10 @@
  The length of the video in seconds
  */
 @property (nonatomic) NSTimeInterval duration;
+
+/**
+ The youtube video player (If applicable)
+ */
+@property (nonatomic, strong) YTPlayerView *playerView;
 
 @end

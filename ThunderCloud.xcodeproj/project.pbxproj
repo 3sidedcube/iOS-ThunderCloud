@@ -118,6 +118,7 @@
 		B1E8C92F1DE314E3006C1A5C /* ExceptionCatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = B1E8C92D1DE314E3006C1A5C /* ExceptionCatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1E8C9391DE33144006C1A5C /* DeveloperMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E8C9381DE33144006C1A5C /* DeveloperMode.storyboard */; };
 		B1E8C93B1DE33200006C1A5C /* DownloadingStormBundleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E8C93A1DE33200006C1A5C /* DownloadingStormBundleViewController.swift */; };
+		B1CF43571D0196DC004130D9 /* YouTubeiOSPlayerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CF43561D0196CE004130D9 /* YouTubeiOSPlayerHelper.framework */; };
 		B1F2F8CE1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F2F8CC1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.h */; };
 		B1F2F8CF1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F2F8CD1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.m */; };
 		B1F7342B1CF74D5A00D6C9C2 /* TSCCollectionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F734291CF74D5A00D6C9C2 /* TSCCollectionCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -437,6 +438,13 @@
 			remoteGlobalIDString = C272EF8319C831AB004BD339;
 			remoteInfo = ThunderBasics;
 		};
+		B1CF43551D0196CE004130D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1CF434B1D0196CE004130D9 /* youtube-ios-player-helper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B3C76A1A1B975AA700F375B4;
+			remoteInfo = YouTubeiOSPlayerHelper;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -564,6 +572,7 @@
 		B1E8C92D1DE314E3006C1A5C /* ExceptionCatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExceptionCatcher.h; sourceTree = "<group>"; };
 		B1E8C9381DE33144006C1A5C /* DeveloperMode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeveloperMode.storyboard; sourceTree = "<group>"; };
 		B1E8C93A1DE33200006C1A5C /* DownloadingStormBundleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingStormBundleViewController.swift; sourceTree = "<group>"; };
+		B1CF434B1D0196CE004130D9 /* youtube-ios-player-helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "youtube-ios-player-helper.xcodeproj"; path = "YouTube API/youtube-ios-player-helper.xcodeproj"; sourceTree = "<group>"; };
 		B1F2F8CC1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCAreaSelectionQuestion.h; sourceTree = "<group>"; };
 		B1F2F8CD1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCAreaSelectionQuestion.m; sourceTree = "<group>"; };
 		B1F734291CF74D5A00D6C9C2 /* TSCCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCCollectionCell.h; sourceTree = "<group>"; };
@@ -810,6 +819,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1226D901DE8A38400ED50CB /* MobileCoreServices.framework in Frameworks */,
+				B1CF43571D0196DC004130D9 /* YouTubeiOSPlayerHelper.framework in Frameworks */,
 				49BB21251CBBBD39008A6179 /* libz.tbd in Frameworks */,
 				49BB211F1CBBBCC7008A6179 /* ThunderBasics.framework in Frameworks */,
 				49BB21201CBBBCC7008A6179 /* ThunderRequest.framework in Frameworks */,
@@ -1457,6 +1467,14 @@
 			name = Editing;
 			sourceTree = "<group>";
 		};
+		B1CF434C1D0196CE004130D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1CF43561D0196CE004130D9 /* YouTubeiOSPlayerHelper.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B1E74A231ABB0AC100A2D38B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -1474,6 +1492,7 @@
 			isa = PBXGroup;
 			children = (
 				49C06C8D1DA5051100CEF0DD /* StreamingPagesTests.swift */,
+				B1CF434B1D0196CE004130D9 /* youtube-ios-player-helper.xcodeproj */,
 				C284D47119C83FC600DA5EE3 /* ThunderCloud */,
 				C284D47B19C83FC600DA5EE3 /* ThunderCloudTests */,
 				49BB20F41CBBBC5C008A6179 /* Frameworks */,
@@ -1840,6 +1859,10 @@
 					ProductGroup = 49BB21111CBBBC8C008A6179 /* Products */;
 					ProjectRef = 49BB21101CBBBC8C008A6179 /* ThunderTable.xcodeproj */;
 				},
+				{
+					ProductGroup = B1CF434C1D0196CE004130D9 /* Products */;
+					ProjectRef = B1CF434B1D0196CE004130D9 /* youtube-ios-player-helper.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1911,6 +1934,13 @@
 			fileType = wrapper.cfbundle;
 			path = ThunderTableTests.xctest;
 			remoteRef = 49BB21171CBBBC8C008A6179 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B1CF43561D0196CE004130D9 /* YouTubeiOSPlayerHelper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YouTubeiOSPlayerHelper.framework;
+			remoteRef = B1CF43551D0196CE004130D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
