@@ -10,7 +10,16 @@
 #import "TSCAnnularPlayButton.h"
 #import "TSCVideoListItemViewCell.h"
 #import "TSCLink.h"
+#import "TSCLink+Youtube.h"
+
 @import YouTubeiOSPlayerHelper;
+
+@interface TSCVideoListItemView ()
+
+    @property (nonatomic, strong) YTPlayerView *playerView;
+
+@end
+
 
 @implementation TSCVideoListItemView
 
@@ -45,6 +54,31 @@
     return NO;
 }
 
+- (id)rowSelectionTarget
+{
+    return self;
+}
+
+- (SEL)rowSelectionSelector {
+    return @selector(handleSelection:);
+}
+
+- (void)handleSelection:(TSCTableSelection *)selection
+{
+    TSCLink *url = [selection.object rowLink];
+    
+    if (url && [url isKindOfClass:[TSCLink class]]) {
+        NSString *youtubeVideoId = [url youtubeVideoId];
+        
+        if (youtubeVideoId) {
+            [self.playerView loadWithVideoId:youtubeVideoId playerVars:@{@"playsinline":@1, @"rel": @0}];
+            
+        } else {
+            [self.playerView.webView removeFromSuperview];
+        }
+    }
+}
+
 - (Class)tableViewCellClass;
 {
     return [TSCVideoListItemViewCell class];
@@ -55,6 +89,8 @@
     cell = (TSCVideoListItemViewCell *)[super tableViewCell:cell];
     cell.duration = self.duration;
     
+    self.playerView = cell.playerView;
+
     return cell;
 }
 

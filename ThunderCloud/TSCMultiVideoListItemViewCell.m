@@ -11,38 +11,10 @@
 #import "TSCAnnularPlayButton.h"
 #import "TSCVideoLanguageSelectionViewController.h"
 #import "TSCVideo.h"
+#import "TSCLink+Youtube.h"
+
 @import UIKit;
 @import ThunderBasics;
-
-@interface TSCLink (YouTube)
-
-- (NSString  * _Nullable)youtubeVideoId;
-
-@end
-
-@implementation TSCLink (YouTube)
-
-- (NSString *)youtubeVideoId
-{
-    if (![self.linkClass isEqualToString:@"ExternalLink"] || !self.url.absoluteString || ![self.url.absoluteString containsString:@"youtube.com"]) {
-        return nil;
-    }
-    
-    NSURLComponents *components = [NSURLComponents componentsWithURL:self.url resolvingAgainstBaseURL:false];
-    __block NSString *identifier;
-    
-    [components.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        if ([obj.name isEqualToString:@"v"] && obj.value) {
-            identifier = obj.value;
-            *stop = true;
-        }
-    }];
-    
-    return identifier;
-}
-
-@end
 
 @interface TSCMultiVideoListItemViewCell () <TSCVideoLanguageSelectionViewControllerDelegate>
 

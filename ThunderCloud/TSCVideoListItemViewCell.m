@@ -59,9 +59,6 @@
     
     float durationLabelInset = 5;
     
-    if (![TSCThemeManager isOS7]) {
-        durationLabelInset = 15;
-    }
     
     if (self.duration > 0) {
         
@@ -96,6 +93,26 @@
     [UIView animateWithDuration:0.4 animations:^{
         [self.contentView bringSubviewToFront:self.playerView];
         self.playerView.alpha = 1.0;
+    }];
+    
+    [playerView playVideo];
+}
+
+- (void)playerView:(YTPlayerView *)playerView didChangeToState:(YTPlayerState)state
+{
+    // If player has ended hide the player to show the play button and thumbnail
+    if (state == kYTPlayerStateEnded) {
+        
+        [self hidePlayer];
+    }
+}
+
+- (void)hidePlayer
+{
+    [UIView animateWithDuration:0.4 animations:^{
+        self.playerView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [self.contentView sendSubviewToBack:self.playerView];
     }];
 }
 

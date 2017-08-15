@@ -114,11 +114,11 @@
 		B1C2A0531ABAD8700003ED4E /* TSCEditLocalisationRow.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C2A0511ABAD8700003ED4E /* TSCEditLocalisationRow.m */; };
 		B1C2A0571ABADC360003ED4E /* TSCEditLocalisationTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B1C2A0551ABADC360003ED4E /* TSCEditLocalisationTableViewCell.h */; };
 		B1C2A0581ABADC360003ED4E /* TSCEditLocalisationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C2A0561ABADC360003ED4E /* TSCEditLocalisationTableViewCell.m */; };
+		B1CF43571D0196DC004130D9 /* YouTubeiOSPlayerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CF43561D0196CE004130D9 /* YouTubeiOSPlayerHelper.framework */; };
 		B1E088861DA68DCC00E45E47 /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E088851DA68DCC00E45E47 /* ContentController.swift */; };
 		B1E8C92F1DE314E3006C1A5C /* ExceptionCatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = B1E8C92D1DE314E3006C1A5C /* ExceptionCatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1E8C9391DE33144006C1A5C /* DeveloperMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E8C9381DE33144006C1A5C /* DeveloperMode.storyboard */; };
 		B1E8C93B1DE33200006C1A5C /* DownloadingStormBundleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E8C93A1DE33200006C1A5C /* DownloadingStormBundleViewController.swift */; };
-		B1CF43571D0196DC004130D9 /* YouTubeiOSPlayerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CF43561D0196CE004130D9 /* YouTubeiOSPlayerHelper.framework */; };
 		B1F2F8CE1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F2F8CC1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.h */; };
 		B1F2F8CF1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F2F8CD1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.m */; };
 		B1F7342B1CF74D5A00D6C9C2 /* TSCCollectionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F734291CF74D5A00D6C9C2 /* TSCCollectionCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -351,6 +351,8 @@
 		C2F37D8619FFB507009957F0 /* TSCHeaderListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F37D8419FFB507009957F0 /* TSCHeaderListItem.m */; };
 		C2F37D8919FFB65B009957F0 /* TSCTableHeaderListItemViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C2F37D8719FFB65B009957F0 /* TSCTableHeaderListItemViewCell.h */; };
 		C2F37D8A19FFB65B009957F0 /* TSCTableHeaderListItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F37D8819FFB65B009957F0 /* TSCTableHeaderListItemViewCell.m */; };
+		FFB22BB31F432F50000BF346 /* TSCLink+Youtube.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB22BB11F432F50000BF346 /* TSCLink+Youtube.h */; };
+		FFB22BB41F432F50000BF346 /* TSCLink+Youtube.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB22BB21F432F50000BF346 /* TSCLink+Youtube.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -568,11 +570,11 @@
 		B1C2A0511ABAD8700003ED4E /* TSCEditLocalisationRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCEditLocalisationRow.m; sourceTree = "<group>"; };
 		B1C2A0551ABADC360003ED4E /* TSCEditLocalisationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCEditLocalisationTableViewCell.h; sourceTree = "<group>"; };
 		B1C2A0561ABADC360003ED4E /* TSCEditLocalisationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCEditLocalisationTableViewCell.m; sourceTree = "<group>"; };
+		B1CF434B1D0196CE004130D9 /* youtube-ios-player-helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "youtube-ios-player-helper.xcodeproj"; path = "YouTube API/youtube-ios-player-helper.xcodeproj"; sourceTree = "<group>"; };
 		B1E088851DA68DCC00E45E47 /* ContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 		B1E8C92D1DE314E3006C1A5C /* ExceptionCatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExceptionCatcher.h; sourceTree = "<group>"; };
 		B1E8C9381DE33144006C1A5C /* DeveloperMode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeveloperMode.storyboard; sourceTree = "<group>"; };
 		B1E8C93A1DE33200006C1A5C /* DownloadingStormBundleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingStormBundleViewController.swift; sourceTree = "<group>"; };
-		B1CF434B1D0196CE004130D9 /* youtube-ios-player-helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "youtube-ios-player-helper.xcodeproj"; path = "YouTube API/youtube-ios-player-helper.xcodeproj"; sourceTree = "<group>"; };
 		B1F2F8CC1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCAreaSelectionQuestion.h; sourceTree = "<group>"; };
 		B1F2F8CD1B98490F00C7D6C6 /* TSCAreaSelectionQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCAreaSelectionQuestion.m; sourceTree = "<group>"; };
 		B1F734291CF74D5A00D6C9C2 /* TSCCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCCollectionCell.h; sourceTree = "<group>"; };
@@ -811,6 +813,8 @@
 		C2F37D8419FFB507009957F0 /* TSCHeaderListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCHeaderListItem.m; sourceTree = "<group>"; };
 		C2F37D8719FFB65B009957F0 /* TSCTableHeaderListItemViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCTableHeaderListItemViewCell.h; sourceTree = "<group>"; };
 		C2F37D8819FFB65B009957F0 /* TSCTableHeaderListItemViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCTableHeaderListItemViewCell.m; sourceTree = "<group>"; };
+		FFB22BB11F432F50000BF346 /* TSCLink+Youtube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSCLink+Youtube.h"; sourceTree = "<group>"; };
+		FFB22BB21F432F50000BF346 /* TSCLink+Youtube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TSCLink+Youtube.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1100,6 +1104,8 @@
 				C284D55619C8400E00DA5EE3 /* TSCVideo.m */,
 				C284D55719C8400E00DA5EE3 /* TSCVideoLanguageSelectionViewController.h */,
 				C284D55819C8400E00DA5EE3 /* TSCVideoLanguageSelectionViewController.m */,
+				FFB22BB11F432F50000BF346 /* TSCLink+Youtube.h */,
+				FFB22BB21F432F50000BF346 /* TSCLink+Youtube.m */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -1722,6 +1728,7 @@
 				C284D5B019C8400E00DA5EE3 /* TSCDescriptionListItem.h in Headers */,
 				C284D60319C8400E00DA5EE3 /* TSCQuizPage.h in Headers */,
 				C2D838531A08E6C100F99FE5 /* TSCLocalisationLanguage.h in Headers */,
+				FFB22BB31F432F50000BF346 /* TSCLink+Youtube.h in Headers */,
 				C284D5AC19C8400E00DA5EE3 /* TSCCoordinate.h in Headers */,
 				3672EEF91A01299F000D9E87 /* TSCListItemView.h in Headers */,
 				3672EF391A013B95000D9E87 /* TSCCollectionListItemView.h in Headers */,
@@ -1989,6 +1996,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB22BB41F432F50000BF346 /* TSCLink+Youtube.m in Sources */,
 				36D8253C1AB6F1F800D12509 /* TSCTabBarMoreViewController.m in Sources */,
 				C284D62B19C8400E00DA5EE3 /* TSCTableNumberedViewCell.m in Sources */,
 				C2F37D8A19FFB65B009957F0 /* TSCTableHeaderListItemViewCell.m in Sources */,
