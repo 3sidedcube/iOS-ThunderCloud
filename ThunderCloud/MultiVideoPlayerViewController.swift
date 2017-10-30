@@ -197,7 +197,7 @@ open class MultiVideoPlayerViewController: UIViewController {
 		view.layer.addSublayer(videoPlayerLayer!)
 		player?.play()
 		
-		let interval = CMTime(seconds: 33, preferredTimescale: 1000)
+		let interval = CMTime(seconds: 0.5, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
 		
 		player?.addPeriodicTimeObserver(forInterval: interval, queue: .main, using: { [weak self] (time) in
 			
@@ -372,7 +372,9 @@ open class MultiVideoPlayerViewController: UIViewController {
 				return
 			}
 			
-			welf.playVideo(at: videoURL)
+			OperationQueue.main.addOperation {
+				welf.playVideo(at: videoURL)
+			}
 		}
 		
 		dataTask.resume()
