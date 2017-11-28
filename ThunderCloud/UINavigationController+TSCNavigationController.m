@@ -100,6 +100,16 @@ static NSString *disclaimerPageId = nil;
 
 - (void)pushLink:(TSCLink *)link
 {
+	//Check with the App Delegate that the link is whitelisted by the application!
+	if ([UIApplication sharedApplication].delegate && [[UIApplication sharedApplication].delegate isKindOfClass:[TSCAppDelegate class]] && link.url) {
+		
+		TSCAppDelegate *delegate = (TSCAppDelegate *)[UIApplication sharedApplication].delegate;
+		if (![delegate linkIsWhitelisted: link]) {
+			NSLog(@"[Storm] Tried to push %@ which is not a whitelisted url", link.url.absoluteString ? : link);
+			return;
+		}
+	}
+	
     NSString *extension = link.url.pathExtension;
     NSString *scheme = link.url.scheme;
     NSString *host = link.url.host;
