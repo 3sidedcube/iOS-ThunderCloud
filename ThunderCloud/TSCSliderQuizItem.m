@@ -111,7 +111,11 @@
     [self.titleWrapper setHeight:self.titleLabel.frame.size.height + self.hintLabel.frame.size.height + 35];
     [self.titleWrapper centerSubviewsVertically];
     
-    self.bottomWrapper.frame = CGRectMake(0, self.view.frame.size.height - 75, self.view.frame.size.width, 75);
+    if (@available(iOS 11.0, *)) {
+        self.bottomWrapper.frame = CGRectMake(0, self.view.frame.size.height - (75 + self.view.safeAreaInsets.bottom), self.view.frame.size.width, 75 + self.view.safeAreaInsets.bottom);
+    } else {
+        self.bottomWrapper.frame = CGRectMake(0, self.view.frame.size.height - 75, self.view.frame.size.width, 75);
+    }
     
     [self.unitsLabel sizeToFit];
     self.unitsLabel.frame = CGRectMake(0, 8, self.view.bounds.size.width, self.unitsLabel.frame.size.height);
