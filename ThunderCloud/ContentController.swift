@@ -994,7 +994,7 @@ public extension ContentController {
     /// - parameter inDirectory:   A specific directory inside of the storm bundle to lookup (Optional)
     ///
     /// - returns: Returns a url for the resource if it's found
-    public func fileUrl(forResource: String, withExtension: String, inDirectory: String?) -> URL? {
+    @objc public func fileUrl(forResource: String, withExtension: String, inDirectory: String?) -> URL? {
         
         var bundleFile: URL?
         var cacheFile: URL?
@@ -1033,7 +1033,7 @@ public extension ContentController {
     /// - parameter forCacheURL: The storm cache URL to convert
     ///
     /// - returns: Returns an optional path if the file exists at the cache link
-    public func url(forCacheURL: URL?) -> URL? {
+    @objc public func url(forCacheURL: URL?) -> URL? {
         
         guard let forCacheURL = forCacheURL else { return nil }
         
@@ -1050,7 +1050,7 @@ public extension ContentController {
     /// - parameter inDirectory: The directory to look for files in
     ///
     /// - returns: A set of file names found in a directory (note: this does NOT include the path)
-    public func fileNames(inDirectory: String) -> Set<String>? {
+    @objc public func fileNames(inDirectory: String) -> Set<String>? {
         
         var files: Set<String> = []
         
@@ -1156,7 +1156,7 @@ public extension ContentController {
     /// - parameter withId: The unique identifier of the page to lookup in the bundle
     ///
     /// - returns: A dictionary of the metadata for a certain page
-    public func metadataForPage(withId: String) -> [AnyHashable : Any]? {
+    @objc public func metadataForPage(withId: String) -> [AnyHashable : Any]? {
         
         guard let map = appDictionary?["map"] as? [[AnyHashable : Any]] else { return nil }
         
@@ -1172,7 +1172,7 @@ public extension ContentController {
     /// - parameter withName: The page name of the page to lookup in the bundle
     ///
     /// - returns: A dictionary of the metadata for a certain page
-    public func metadataForPage(withName: String) -> [AnyHashable : Any]? {
+    @objc public func metadataForPage(withName: String) -> [AnyHashable : Any]? {
         
         guard let map = appDictionary?["map"] as? [[AnyHashable : Any]] else { return nil }
         
@@ -1192,7 +1192,7 @@ public extension ContentController {
     /// This method can be called to re-index the application in CoreSpotlight
     ///
     /// - parameter completion: A closure which will be called when the indexing has completed
-    public func indexAppContent(with completion: @escaping CoreSpotlightCompletion) {
+    @objc public func indexAppContent(with completion: @escaping CoreSpotlightCompletion) {
         
         OperationQueue().addOperation {
             

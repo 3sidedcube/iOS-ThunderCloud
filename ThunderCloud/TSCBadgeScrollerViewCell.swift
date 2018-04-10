@@ -130,7 +130,7 @@ class CarouselLayout: UICollectionViewFlowLayout {
 
 open class TSCBadgeScrollerViewCell: TSCCollectionCell {
 
-    public var badges: [TSCBadge] = [] {
+    @objc public var badges: [TSCBadge] = [] {
         didSet {
             reload()
         }

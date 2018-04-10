@@ -436,6 +436,13 @@
 			remoteGlobalIDString = C272EF8319C831AB004BD339;
 			remoteInfo = ThunderBasics;
 		};
+		B12D52CF207CB0F6007BF6AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49BB20FE1CBBBC73008A6179 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B120EE3D207B895800A4A7CA;
+			remoteInfo = ThunderRequestWatch;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1407,6 +1414,7 @@
 				49BB210B1CBBBC73008A6179 /* ThunderRequestMac.framework */,
 				49BB210D1CBBBC73008A6179 /* ThunderRequestMacTests.xctest */,
 				49BB210F1CBBBC73008A6179 /* ThunderRequestTV.framework */,
+				B12D52D0207CB0F6007BF6AB /* ThunderRequestWatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1909,6 +1917,13 @@
 			remoteRef = 49BB21171CBBBC8C008A6179 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		B12D52D0207CB0F6007BF6AB /* ThunderRequestWatch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ThunderRequestWatch.framework;
+			remoteRef = B12D52CF207CB0F6007BF6AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -2269,7 +2284,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -2294,7 +2309,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
