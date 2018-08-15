@@ -84,7 +84,7 @@
 
 - (void)spotlightViewCell:(TSCSpotlightImageListItemViewCell *)cell didReceiveTapOnItemAtIndex:(NSInteger)index
 {
-    if (self.spotlights.count == 0) { // If an animated image cell has no images this fixes a crash
+    if (self.spotlights.count == 0  || index >= self.items.count || index < 0) { // If an animated image cell has no images this fixes a crash
         return;
     }
     
