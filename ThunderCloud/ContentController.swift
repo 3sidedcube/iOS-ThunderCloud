@@ -11,6 +11,7 @@ import ThunderRequest
 import ThunderBasics
 import UIKit
 import os
+import Baymax
 
 let API_VERSION: String? = Bundle.main.infoDictionary?["TSCAPIVersion"] as? String
 let API_BASEURL: String? = Bundle.main.infoDictionary?["TSCBaseURL"] as? String
@@ -124,6 +125,8 @@ public class ContentController: NSObject {
     private override init() {
         
         os_log("Initialising Content Controller", log: contentControllerLog, type: .info)
+        
+        DiagnosticsManager.sharedInstance.register(provider: ThunderCloudService())
 
         UserDefaults.standard.set(API_VERSION, forKey: "update_api_version")
         

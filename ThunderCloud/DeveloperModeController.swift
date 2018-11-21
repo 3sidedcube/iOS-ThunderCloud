@@ -105,7 +105,10 @@ public class DeveloperModeController: NSObject {
         
         print("<Developer Controls> Clearing cache")
         
-        ContentController.shared.cleanoutCache()
+        if let deltaDirectory = ContentController.shared.deltaDirectory {
+            ContentController.shared.removeBundle(in: deltaDirectory)
+        }
+    
         StormLanguageController.shared.reloadLanguagePack()
         ContentController.shared.updateSettingsBundle()
         ContentController.shared.checkForUpdates()

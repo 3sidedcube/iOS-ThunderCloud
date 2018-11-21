@@ -21,6 +21,11 @@
 		49BB21201CBBBCC7008A6179 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB21071CBBBC73008A6179 /* ThunderRequest.framework */; };
 		49BB21211CBBBCC7008A6179 /* ThunderTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB21161CBBBC8C008A6179 /* ThunderTable.framework */; };
 		49BB21251CBBBD39008A6179 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB21241CBBBD39008A6179 /* libz.tbd */; };
+		49EE08D0219D783100AF4C67 /* Baymax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EE08CF219D783100AF4C67 /* Baymax.framework */; };
+		49EE08D3219D785600AF4C67 /* ThunderCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EE08D2219D785600AF4C67 /* ThunderCloudService.swift */; };
+		49EE08D5219D7A2700AF4C67 /* BundleDiagnosticTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EE08D4219D7A2700AF4C67 /* BundleDiagnosticTool.swift */; };
+		49EE08D8219D7C6D00AF4C67 /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49EE08D6219D7C6D00AF4C67 /* InformationTableViewCell.xib */; };
+		49EE08D9219D7C6D00AF4C67 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EE08D7219D7C6D00AF4C67 /* InformationTableViewCell.swift */; };
 		49F12CA91E4370C700EC2321 /* StormGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F12CA81E4370C700EC2321 /* StormGenerator.swift */; };
 		49FC635E1EE1650D0018D293 /* StormLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FC635D1EE1650D0018D293 /* StormLanguageController.swift */; };
 		B104A4661FA7800800DDBB22 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B104A4651FA7800800DDBB22 /* DummyViewController.swift */; };
@@ -321,6 +326,13 @@
 			remoteGlobalIDString = C272EF8319C831AB004BD339;
 			remoteInfo = ThunderBasics;
 		};
+		49EE08CC219D782400AF4C67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49BB20FE1CBBBC73008A6179 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B120EE3D207B895800A4A7CA;
+			remoteInfo = ThunderRequestWatch;
+		};
 		B13778F520289FF7006FE6D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B13778EF20289FF6006FE6D5 /* ThunderCollection.xcodeproj */;
@@ -369,6 +381,11 @@
 		49BB21241CBBBD39008A6179 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		49C06C731DA4F86500CEF0DD /* StreamingContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingContentController.swift; sourceTree = "<group>"; };
 		49C06C8D1DA5051100CEF0DD /* StreamingPagesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamingPagesTests.swift; path = ThunderCloudTests/StreamingPagesTests.swift; sourceTree = "<group>"; };
+		49EE08CF219D783100AF4C67 /* Baymax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Baymax.framework; sourceTree = "<group>"; };
+		49EE08D2219D785600AF4C67 /* ThunderCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThunderCloudService.swift; sourceTree = "<group>"; };
+		49EE08D4219D7A2700AF4C67 /* BundleDiagnosticTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDiagnosticTool.swift; sourceTree = "<group>"; };
+		49EE08D6219D7C6D00AF4C67 /* InformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
+		49EE08D7219D7C6D00AF4C67 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		49F12CA81E4370C700EC2321 /* StormGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StormGenerator.swift; sourceTree = "<group>"; };
 		49FC635D1EE1650D0018D293 /* StormLanguageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StormLanguageController.swift; sourceTree = "<group>"; };
 		B104A4651FA7800800DDBB22 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
@@ -602,6 +619,7 @@
 				49BB211F1CBBBCC7008A6179 /* ThunderBasics.framework in Frameworks */,
 				49BB21201CBBBCC7008A6179 /* ThunderRequest.framework in Frameworks */,
 				49BB21211CBBBCC7008A6179 /* ThunderTable.framework in Frameworks */,
+				49EE08D0219D783100AF4C67 /* Baymax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1047,6 +1065,7 @@
 		49BB20F41CBBBC5C008A6179 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49EE08CF219D783100AF4C67 /* Baymax.framework */,
 				B1226D8F1DE8A38400ED50CB /* MobileCoreServices.framework */,
 				49BB21241CBBBD39008A6179 /* libz.tbd */,
 				B13778EF20289FF6006FE6D5 /* ThunderCollection.xcodeproj */,
@@ -1076,6 +1095,7 @@
 				49BB210B1CBBBC73008A6179 /* ThunderRequestMac.framework */,
 				49BB210D1CBBBC73008A6179 /* ThunderRequestMacTests.xctest */,
 				49BB210F1CBBBC73008A6179 /* ThunderRequestTV.framework */,
+				49EE08CD219D782400AF4C67 /* ThunderRequestWatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1087,6 +1107,25 @@
 				49BB21181CBBBC8C008A6179 /* ThunderTableTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		49EE08D1219D783900AF4C67 /* Diagnostics */ = {
+			isa = PBXGroup;
+			children = (
+				49EE08D2219D785600AF4C67 /* ThunderCloudService.swift */,
+				49EE08D4219D7A2700AF4C67 /* BundleDiagnosticTool.swift */,
+				49EE08DA219D7C7100AF4C67 /* Views */,
+			);
+			name = Diagnostics;
+			sourceTree = "<group>";
+		};
+		49EE08DA219D7C7100AF4C67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49EE08D7219D7C6D00AF4C67 /* InformationTableViewCell.swift */,
+				49EE08D6219D7C6D00AF4C67 /* InformationTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B11063BE1F41AFE2003E5814 /* Helper Views */ = {
@@ -1195,6 +1234,7 @@
 			isa = PBXGroup;
 			children = (
 				C284D48819C83FF300DA5EE3 /* ThunderCloud.h */,
+				49EE08D1219D783900AF4C67 /* Diagnostics */,
 				B18E2B421DE601670073D58E /* Login */,
 				36B399A11A0CD0A200C98D0F /* Notifications */,
 				C2D838571A08E6C600F99FE5 /* Localisations */,
@@ -1482,6 +1522,13 @@
 			remoteRef = 49BB21171CBBBC8C008A6179 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		49EE08CD219D782400AF4C67 /* ThunderRequestWatch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ThunderRequestWatch.framework;
+			remoteRef = 49EE08CC219D782400AF4C67 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		B13778F620289FF7006FE6D5 /* ThunderCollection.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -1517,6 +1564,7 @@
 				B114F1A120373042005D52F2 /* StandardGridItemCell.xib in Resources */,
 				B18E2B0A1DE5A8230073D58E /* Login.storyboard in Resources */,
 				B13F370E1F192E5C00F31013 /* AnimationListItemCell.xib in Resources */,
+				49EE08D8219D7C6D00AF4C67 /* InformationTableViewCell.xib in Resources */,
 				B13779102028AF58006FE6D5 /* ImageSelectionCollectionViewCell.xib in Resources */,
 				B10832221F0A8599008B565D /* SpotlightImageCollectionViewCell.xib in Resources */,
 				497521E11D096C1B00B2E16F /* iso639_2.bundle in Resources */,
@@ -1671,6 +1719,7 @@
 				B114F19D20372E92005D52F2 /* StandardGridCell.swift in Sources */,
 				B108323D1F0BA48A008B565D /* LinkCollectionCell.swift in Sources */,
 				497521E51D096C3100B2E16F /* NSLocale+ISO639_2.m in Sources */,
+				49EE08D5219D7A2700AF4C67 /* BundleDiagnosticTool.swift in Sources */,
 				B108326B1F0BD478008B565D /* StandardListItem.swift in Sources */,
 				B12C14AF1F681E6B001B56D6 /* LocalisationController.swift in Sources */,
 				B110655B1F4ED9C0003E5814 /* TSCAppDelegate.swift in Sources */,
@@ -1681,6 +1730,7 @@
 				B179EC261F0FA1920007ED3F /* MultiVideoListItemCell.swift in Sources */,
 				B13DE0D81F0D2C5000C6B9B7 /* SpotlightImageListItemView.swift in Sources */,
 				B1226D881DE8A18800ED50CB /* TSCReachability.m in Sources */,
+				49EE08D3219D785600AF4C67 /* ThunderCloudService.swift in Sources */,
 				B1A378A21F5D541B0022D46A /* InlineButtonView.swift in Sources */,
 				B114F1942037269A005D52F2 /* GridItem.swift in Sources */,
 				B108322C1F0B8314008B565D /* NumberedViewCell.swift in Sources */,
@@ -1693,6 +1743,7 @@
 				B108325B1F0BD2CA008B565D /* List.swift in Sources */,
 				B1B0469D1F0E846600FD2FA7 /* LocalisationKeyValue.swift in Sources */,
 				B1B046A51F0E926000FD2FA7 /* EditLocalisationTableViewCell.swift in Sources */,
+				49EE08D9219D7C6D00AF4C67 /* InformationTableViewCell.swift in Sources */,
 				B1B046971F0E726100FD2FA7 /* SpotlightListItem.swift in Sources */,
 				B10831A91F06924F008B565D /* AnimatedImageListCell.swift in Sources */,
 				B137790F2028AF58006FE6D5 /* ImageSelectionCollectionViewCell.swift in Sources */,
@@ -1887,11 +1938,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThunderCloud",
+				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ThunderCloud/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.threesidedcube.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1914,11 +1968,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThunderCloud",
+				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ThunderCloud/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.threesidedcube.$(PRODUCT_NAME:rfc1034identifier)";

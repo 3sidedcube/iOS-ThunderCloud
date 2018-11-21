@@ -10,16 +10,16 @@ import UIKit
 import ThunderBasics
 
 /// A view controller which provides the user with an interface to login to their storm CMS account
-class StormLoginViewController: UIViewController {
+public class StormLoginViewController: UIViewController {
 
 	/// Closure called when the user interacts with login
-	typealias LoginCompletion = (_ sucessful: Bool, _ cancelled: Bool, _ error: Error?) -> Void
+	public typealias LoginCompletion = (_ sucessful: Bool, _ cancelled: Bool, _ error: Error?) -> Void
 	
 	/// A closure to be called when the user has made an attempt to log in or cancelled
-	var completion: LoginCompletion?
+	public var completion: LoginCompletion?
 	
 	/// The reason for requesting a storm login, will be displayed on the login UI
-	var loginReason: String?
+	public var loginReason: String?
 	
 	/// A view controller which will be shown inside the small white container view controller upon
 	/// sucessful login
@@ -66,7 +66,7 @@ class StormLoginViewController: UIViewController {
 		})
 	}
 	
-	override func viewDidLoad() {
+    override public func viewDidLoad() {
 		
 		super.viewDidLoad()
 		
@@ -97,7 +97,7 @@ class StormLoginViewController: UIViewController {
 		passwordField.rightInset = 8
 	}
 	
-	override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
 		
 		super.viewWillAppear(animated)
 		

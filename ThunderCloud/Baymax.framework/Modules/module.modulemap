@@ -1,0 +1,11 @@
+framework module Baymax {
+  umbrella header "Baymax.h"
+
+  export *
+  module * { export * }
+}
+
+module Baymax.Swift {
+    header "Baymax-Swift.h"
+    requires objc
+}
