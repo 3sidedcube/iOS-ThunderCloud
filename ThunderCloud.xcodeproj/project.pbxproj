@@ -208,6 +208,8 @@
 		B1E8C92F1DE314E3006C1A5C /* ExceptionCatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = B1E8C92D1DE314E3006C1A5C /* ExceptionCatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1E8C9391DE33144006C1A5C /* DeveloperMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E8C9381DE33144006C1A5C /* DeveloperMode.storyboard */; };
 		B1E8C93B1DE33200006C1A5C /* DownloadingStormBundleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E8C93A1DE33200006C1A5C /* DownloadingStormBundleViewController.swift */; };
+		B1FE3A3E222821C200AB452F /* Language+Preferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE3A3D222821C200AB452F /* Language+Preferred.swift */; };
+		B1FE3A40222824B300AB452F /* PreferredLanguagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE3A3F222824B300AB452F /* PreferredLanguagesTests.swift */; };
 		C284D48919C83FF300DA5EE3 /* ThunderCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = C284D48819C83FF300DA5EE3 /* ThunderCloud.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C284D57319C8400E00DA5EE3 /* StormAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C284D49019C8400D00DA5EE3 /* StormAssets.xcassets */; };
 		C284D59819C8400E00DA5EE3 /* TSCBadgeShareViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C284D4B519C8400D00DA5EE3 /* TSCBadgeShareViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -554,13 +556,14 @@
 		B1E8C92D1DE314E3006C1A5C /* ExceptionCatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExceptionCatcher.h; sourceTree = "<group>"; };
 		B1E8C9381DE33144006C1A5C /* DeveloperMode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeveloperMode.storyboard; sourceTree = "<group>"; };
 		B1E8C93A1DE33200006C1A5C /* DownloadingStormBundleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingStormBundleViewController.swift; sourceTree = "<group>"; };
+		B1FE3A3D222821C200AB452F /* Language+Preferred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+Preferred.swift"; sourceTree = "<group>"; };
+		B1FE3A3F222824B300AB452F /* PreferredLanguagesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredLanguagesTests.swift; sourceTree = "<group>"; };
 		C274238119C840EB003582C0 /* ThunderBasics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ThunderBasics.framework; path = "../../Thunder Basics/build/Debug-iphoneos/ThunderBasics.framework"; sourceTree = "<group>"; };
 		C274238419C840F0003582C0 /* ThunderRequest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ThunderRequest.framework; path = "../../Thunder Request/build/Debug-iphoneos/ThunderRequest.framework"; sourceTree = "<group>"; };
 		C274238519C840F0003582C0 /* ThunderTable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ThunderTable.framework; path = "../../Thunder Table/build/Debug-iphoneos/ThunderTable.framework"; sourceTree = "<group>"; };
 		C284D46F19C83FC600DA5EE3 /* ThunderCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ThunderCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C284D47319C83FC600DA5EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C284D47D19C83FC600DA5EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C284D47E19C83FC600DA5EE3 /* ThunderCloudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThunderCloudTests.swift; sourceTree = "<group>"; };
 		C284D48819C83FF300DA5EE3 /* ThunderCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThunderCloud.h; sourceTree = "<group>"; };
 		C284D49019C8400D00DA5EE3 /* StormAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StormAssets.xcassets; sourceTree = "<group>"; };
 		C284D4B519C8400D00DA5EE3 /* TSCBadgeShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCBadgeShareViewController.h; sourceTree = "<group>"; };
@@ -581,7 +584,6 @@
 		C2F37D8019FF95C6009957F0 /* TSCLinkScrollerItemViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCLinkScrollerItemViewCell.m; sourceTree = "<group>"; };
 		FF7531481F7029E300D0BC52 /* ThunderCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThunderCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF75314A1F7029E300D0BC52 /* ThunderCloudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThunderCloudTests.swift; sourceTree = "<group>"; };
-		FF75314C1F7029E300D0BC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF7531531F702CE300D0BC52 /* StormLinkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StormLinkTests.swift; sourceTree = "<group>"; };
 		FFB956E51F6FE7FA007F3FD1 /* StormLink+Localised.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StormLink+Localised.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -872,6 +874,7 @@
 			children = (
 				B13F36EF1F1781E600F31013 /* Language.swift */,
 				49FC635D1EE1650D0018D293 /* StormLanguageController.swift */,
+				B1FE3A3D222821C200AB452F /* Language+Preferred.swift */,
 			);
 			name = Languages;
 			sourceTree = "<group>";
@@ -1158,7 +1161,6 @@
 				49C06C8D1DA5051100CEF0DD /* StreamingPagesTests.swift */,
 				C284D47119C83FC600DA5EE3 /* ThunderCloud */,
 				C284D47B19C83FC600DA5EE3 /* ThunderCloudTests */,
-				FF7531491F7029E300D0BC52 /* ThunderCloudTests */,
 				49BB20F41CBBBC5C008A6179 /* Frameworks */,
 				C284D47019C83FC600DA5EE3 /* Products */,
 			);
@@ -1220,9 +1222,10 @@
 		C284D47B19C83FC600DA5EE3 /* ThunderCloudTests */ = {
 			isa = PBXGroup;
 			children = (
-				C284D47E19C83FC600DA5EE3 /* ThunderCloudTests.swift */,
+				FF75314A1F7029E300D0BC52 /* ThunderCloudTests.swift */,
 				C284D47C19C83FC600DA5EE3 /* Supporting Files */,
 				FF7531531F702CE300D0BC52 /* StormLinkTests.swift */,
+				B1FE3A3F222824B300AB452F /* PreferredLanguagesTests.swift */,
 			);
 			path = ThunderCloudTests;
 			sourceTree = "<group>";
@@ -1260,15 +1263,6 @@
 				C2F37D8019FF95C6009957F0 /* TSCLinkScrollerItemViewCell.m */,
 			);
 			name = "Link Collection";
-			sourceTree = "<group>";
-		};
-		FF7531491F7029E300D0BC52 /* ThunderCloudTests */ = {
-			isa = PBXGroup;
-			children = (
-				FF75314A1F7029E300D0BC52 /* ThunderCloudTests.swift */,
-				FF75314C1F7029E300D0BC52 /* Info.plist */,
-			);
-			path = ThunderCloudTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1673,6 +1667,7 @@
 				B10832391F0B9D57008B565D /* AppCollectionCell.swift in Sources */,
 				B15103091FAB479E0044A4AC /* Placeholder.swift in Sources */,
 				B108325B1F0BD2CA008B565D /* List.swift in Sources */,
+				B1FE3A3E222821C200AB452F /* Language+Preferred.swift in Sources */,
 				B1B0469D1F0E846600FD2FA7 /* LocalisationKeyValue.swift in Sources */,
 				B1B046A51F0E926000FD2FA7 /* EditLocalisationTableViewCell.swift in Sources */,
 				B1B046971F0E726100FD2FA7 /* SpotlightListItem.swift in Sources */,
@@ -1720,6 +1715,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FE3A40222824B300AB452F /* PreferredLanguagesTests.swift in Sources */,
 				FF7531541F702CE300D0BC52 /* StormLinkTests.swift in Sources */,
 				FF75314B1F7029E300D0BC52 /* ThunderCloudTests.swift in Sources */,
 			);
