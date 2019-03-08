@@ -157,7 +157,8 @@
 
 - (UIImage *)tabBarImageWithImage:(UIImage *)originalImage
 {
-    CGRect rect = CGRectMake(0, 0, 30, 30);
+    CGFloat aspect = 30/originalImage.size.height;
+    CGRect rect = CGRectMake(0, 0, aspect*originalImage.size.width, 30);
     
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, [[UIScreen mainScreen] scale]);
     [originalImage drawInRect:rect];
