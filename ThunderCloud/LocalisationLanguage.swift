@@ -8,6 +8,8 @@
 
 import UIKit
 
+#warning("Add tests.")
+
 /// A representation if a language in the CMS
 public struct LocalisationLanguage {
 	

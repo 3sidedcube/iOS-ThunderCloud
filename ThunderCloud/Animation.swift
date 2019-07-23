@@ -8,6 +8,8 @@
 
 import Foundation
 
+#warning("Add tests.")
+
 /// A representation of an animated image
 ///
 /// Contains info about the frames and whether or not the animagion is looped

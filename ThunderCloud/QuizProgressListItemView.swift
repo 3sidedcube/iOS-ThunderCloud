@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// A table row which displays a user's progress through a set of quizzes and upon selection enters the next incomplete quiz in the set
 class QuizProgressListItemView: ListItem {
     

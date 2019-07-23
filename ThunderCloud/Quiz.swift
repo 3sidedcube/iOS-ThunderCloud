@@ -10,6 +10,8 @@ import UIKit
 
 public typealias Quiz = QuizPage
 
+#warning("Add tests.")
+
 /// A representation of an entire storm quiz
 open class QuizPage: StormObjectProtocol {
 	

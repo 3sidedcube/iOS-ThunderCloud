@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// `ButtonListItem` is a subclass of `EmbeddedLinksItem`, it represents an item with a single button on it. 
 /// It is rendered out as an `EmbeddedLinksListItemCell
 open class ButtonListItem: EmbeddedLinksListItem {

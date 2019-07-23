@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// A table row which shows a collection of badges related to the quizzes available in the application
 ///
 /// Incomplete quizzes (or the badge attached to them) are shown slightly transparent.

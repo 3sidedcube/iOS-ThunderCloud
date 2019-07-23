@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 class PokemonListItemView: TitleListItem {
     
     let items: [PokemonListItem] = {

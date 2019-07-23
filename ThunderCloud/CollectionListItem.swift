@@ -24,6 +24,8 @@ public enum CollectionListItemType {
     case unknown
 }
 
+#warning("Add tests.")
+
 /// A storm item representing a collection of items displayed in a horizontal UICollectionView
 open class CollectionListItem: ListItem {
     

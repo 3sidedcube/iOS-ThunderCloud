@@ -8,6 +8,8 @@
 
 import Foundation
 
+#warning("Add tests.")
+
 open class AppIdentity: StormObjectProtocol {
 	
 	/// The unique identifier for the app identity

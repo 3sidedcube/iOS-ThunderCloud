@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// A video object containing info about a video that can be played by the multi video player
 public class Video: NSObject {
 	

@@ -8,6 +8,8 @@
 
 import UIKit
 
+#warning("Add tests.")
+
 /// `Badge` is a model representation of a storm badge object
 open class Badge: NSObject, StormObjectProtocol {
 	

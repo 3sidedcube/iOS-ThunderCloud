@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// An object representation og a storm language
 ///
 /// This conforms to `Row` and `NSCoding` and so can easily be displayed in a table view (will just display the localised language name) and encoded for storing in `NSUserDefaults`

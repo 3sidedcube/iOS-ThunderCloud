@@ -8,6 +8,8 @@
 
 import Foundation
 
+#warning("Add tests.")
+
 /// All objects used in storm must conform to the `StormObjectProtocol` either by subclassing TSCStormObject or by directly implementing the protocol methods
 @objc public protocol StormObjectProtocol {
 	

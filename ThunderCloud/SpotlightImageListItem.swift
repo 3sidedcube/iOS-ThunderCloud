@@ -8,6 +8,8 @@
 
 import UIKit
 
+#warning("Add tests.")
+
 /// `TSCSpotlightImageListItem` is a model representation of a spotlight, it acts as a `TSCTableRowDataSource`
 @available(*, deprecated, message: "Please use `SpotlightListItem` instead")
 open class SpotlightImageListItem: SpotlightListItem {

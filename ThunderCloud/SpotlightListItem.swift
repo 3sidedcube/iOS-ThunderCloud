@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 open class SpotlightListItem: ListItem, SpotlightListItemCellDelegate {
 	
 	/// An array of `Spotlight`s to be displayed

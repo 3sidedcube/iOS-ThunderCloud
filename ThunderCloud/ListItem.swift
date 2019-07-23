@@ -21,6 +21,8 @@ public protocol RowSelectable {
     func handleSelection(of row: Row, at indexPath: IndexPath, in tableView: UITableView)
 }
 
+#warning("Add tests.")
+
 /// ListItem is the base object for displaying table rows in storm.
 /// It complies to the `Row` protocol
 open class ListItem: StormObject, Row {

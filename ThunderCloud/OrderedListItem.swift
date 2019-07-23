@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// `OrderedListItem` is a subclass of `EmbeddedLinksListItem` which represents a row with a number on the left. They will always be correctly ordered from the CMS (1, 2, 3...)
 open class OrderedListItem: EmbeddedLinksListItem {
 	

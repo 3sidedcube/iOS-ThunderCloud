@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// A subclass of `ImageListItem` which displays an array of animated images, delaying each one by a defined amount of time
 class AnimationListItem: ImageListItem {
 

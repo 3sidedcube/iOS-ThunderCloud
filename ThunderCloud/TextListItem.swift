@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// `TextListItem` is a subclass of `ListItem` which represents a row with just a subtitle.
 /// It is normally used for displaying multiple lines of text.
 /// Note it is an adapter for the object in the cms, all logic is done on it's superclass

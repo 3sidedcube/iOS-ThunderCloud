@@ -8,6 +8,8 @@
 
 import UIKit
 
+#warning("Add tests.")
+
 /// A cartesian coordinate in the x,y,z plans
 struct Coordinate {
 	
@@ -81,6 +83,8 @@ func ==(lhs: Coordinate?, rhs: Coordinate?) -> Bool {
 	return _lhs.x == _rhs.x && _lhs.y == _rhs.y && _lhs.z == _rhs.z
 }
 
+#warning("Add tests.")
+
 /// A zone to be used with AreaSelectionQuestion represented by a collection of points
 struct Zone {
 	
@@ -120,6 +124,8 @@ struct Zone {
 		return path.contains(point)
 	}
 }
+
+#warning("Add tests.")
 
 /// The user is presented with an image and must click on the correct location in the image
 class AreaSelectionQuestion: QuizQuestion {

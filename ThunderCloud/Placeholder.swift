@@ -8,6 +8,8 @@
 
 import UIKit
 
+#warning("Add tests.")
+
 /// A representation of a `UITabBarItem` for usage in `AccordionTabBarViewController`
 struct Placeholder {
 	

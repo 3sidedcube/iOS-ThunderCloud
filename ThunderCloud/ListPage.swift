@@ -12,6 +12,8 @@ import ThunderBasics
 import ThunderTable
 import CoreSpotlight
 
+#warning("Add tests.")
+
 /// `ListPage` is a subclass of `TableViewController` that lays out storm table view content
 open class ListPage: TableViewController, StormObjectProtocol, RowSelectable {
 

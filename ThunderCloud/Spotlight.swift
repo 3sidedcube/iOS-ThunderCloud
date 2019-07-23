@@ -8,6 +8,8 @@
 
 import UIKit
 
+#warning("Add tests.")
+
 /// A model representation of a spotlight that will be displayed inside a view.
 /// This object will usually be part of an array which is cycled through when displayed
 open class Spotlight: StormObject {

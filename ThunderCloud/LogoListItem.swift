@@ -8,6 +8,8 @@
 
 import UIKit
 
+#warning("Add tests.")
+
 /// `LogoListItem` is a subclass of ListItem it is used to display company logos inside of an app. It is rendered out as a `LogoListItemViewCell`.
 open class LogoListItem: ListItem {
 

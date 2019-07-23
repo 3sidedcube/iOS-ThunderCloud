@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// A storm object representation of a video view
 open class VideoListItem: VideoListItemView {
 

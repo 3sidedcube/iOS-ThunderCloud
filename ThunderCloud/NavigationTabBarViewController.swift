@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// A subclass of UIViewController which displays a `UISegmentedControl` to switch between view controllers within a `UINavigationController`
 ///
 /// This class also listens to changes on the navigation items of it's children so will change left and right items as you tab between children

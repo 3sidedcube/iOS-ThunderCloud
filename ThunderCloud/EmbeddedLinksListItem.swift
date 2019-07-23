@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 /// Subclass of `ListItem` that allows embedded links, each link is displayed as a `UIButton`
 open class EmbeddedLinksListItem: ListItem {
 

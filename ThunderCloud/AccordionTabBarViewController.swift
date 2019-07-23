@@ -9,6 +9,8 @@
 import UIKit
 import ThunderTable
 
+#warning("Add tests.")
+
 class ScrollDisabledTableView: UITableView {
 	
 	override func scrollRectToVisible(_ rect: CGRect, animated: Bool) {
@@ -24,6 +26,8 @@ class ScrollDisabledTableView: UITableView {
 		}
 	}
 }
+
+#warning("Add tests.")
 
 public class AccordionTabBarItem: Row {
 	
@@ -132,6 +136,8 @@ public class AccordionTabBarItem: Row {
 		return UITableViewCell.AccessoryType.none
 	}
 }
+
+#warning("Add tests.")
 
 /// A subvlass of `UIViewController` which replaces `UITabBarController`.
 /// Displays the tabs which would be visible in a `UITabBarController` in a table view style, with each item being a cell

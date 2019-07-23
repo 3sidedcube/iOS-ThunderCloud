@@ -8,6 +8,8 @@
 
 import Foundation
 
+#warning("Add tests.")
+
 /// A model representation of an app to be shown in a `TSCAppScrollerItemViewCell`
 open class AppCollectionItem: StormObjectProtocol {
 	

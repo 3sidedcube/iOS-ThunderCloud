@@ -39,6 +39,8 @@ import Foundation
 //    }
 //}
 
+#warning("Add tests.")
+
 /// A representation of a locale in the CMS
 public struct LocalisationLocale {
     

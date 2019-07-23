@@ -11,6 +11,8 @@ import ThunderBasics
 
 let kTSCTabbedPageCollectionUsersPreferedOrderKey = "TSCTabbedPageCollectionUsersPreferedOrder"
 
+#warning("Add tests.")
+
 /// Storm representation of `UITabBarController`
 ///
 /// Allows initialisation of a `UITabBarController` using a dictionary taken from the app bundle
