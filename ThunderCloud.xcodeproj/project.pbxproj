@@ -12,7 +12,6 @@
 		49F12CA91E4370C700EC2321 /* StormGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F12CA81E4370C700EC2321 /* StormGenerator.swift */; };
 		49FC635E1EE1650D0018D293 /* StormLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FC635D1EE1650D0018D293 /* StormLanguageController.swift */; };
 		981EBDAE22C2691F00BAAD89 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 981EBDAD22C2691F00BAAD89 /* Settings.bundle */; };
-		983524AB22E7605B00D97722 /* CollectionListItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983524AA22E7605B00D97722 /* CollectionListItemTests.swift */; };
 		983524AD22E8609D00D97722 /* StormLanguageController+LanguagePack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983524AC22E8609D00D97722 /* StormLanguageController+LanguagePack.swift */; };
 		983524AF22E862E000D97722 /* StormLanguageController+Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983524AE22E862E000D97722 /* StormLanguageController+Locale.swift */; };
 		983524B122E8631800D97722 /* StormLanguageController+RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983524B022E8631800D97722 /* StormLanguageController+RightToLeft.swift */; };
@@ -284,7 +283,6 @@
 		49F12CA81E4370C700EC2321 /* StormGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StormGenerator.swift; sourceTree = "<group>"; };
 		49FC635D1EE1650D0018D293 /* StormLanguageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StormLanguageController.swift; sourceTree = "<group>"; };
 		981EBDAD22C2691F00BAAD89 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ThunderCloud/Settings.bundle; sourceTree = "<group>"; };
-		983524AA22E7605B00D97722 /* CollectionListItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListItemTests.swift; sourceTree = "<group>"; };
 		983524AC22E8609D00D97722 /* StormLanguageController+LanguagePack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StormLanguageController+LanguagePack.swift"; sourceTree = "<group>"; };
 		983524AE22E862E000D97722 /* StormLanguageController+Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StormLanguageController+Locale.swift"; sourceTree = "<group>"; };
 		983524B022E8631800D97722 /* StormLanguageController+RightToLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StormLanguageController+RightToLeft.swift"; sourceTree = "<group>"; };
@@ -954,7 +952,6 @@
 		983524A922E7604500D97722 /* Storm Object Tests */ = {
 			isa = PBXGroup;
 			children = (
-				983524AA22E7605B00D97722 /* CollectionListItemTests.swift */,
 			);
 			path = "Storm Object Tests";
 			sourceTree = "<group>";
@@ -1484,7 +1481,6 @@
 			files = (
 				B11EAEF6219ACC8500891792 /* LocalisedStringTests.swift in Sources */,
 				B1BAAD102226A67F007F0F61 /* LocalisationLocaleTests.swift in Sources */,
-				983524AB22E7605B00D97722 /* CollectionListItemTests.swift in Sources */,
 				B11EAF53219AD19D00891792 /* untar.c in Sources */,
 				B1188CFA22C4C9B20017A003 /* AnalyticsTests.swift in Sources */,
 				B11EAF3D219AD02700891792 /* TSCReachability.m in Sources */,

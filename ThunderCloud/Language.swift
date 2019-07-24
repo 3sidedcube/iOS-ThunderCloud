@@ -56,16 +56,22 @@ extension Language: Row {
 	}
 	
 	public var accessoryType: UITableViewCell.AccessoryType? {
-		
-        guard let currentLanguage = StormLanguageController.shared.currentLanguage, let languageId = languageIdentifier else { return UITableViewCell.AccessoryType.none
-        }
-        
-        if let overrideLanguageId = StormLanguageController.shared.overrideLanguagePack?.locale.identifier, overrideLanguageId == languageId {
-            return .checkmark
-        } else if languageId == currentLanguage {
-            return .checkmark
-        }
-        
-        return UITableViewCell.AccessoryType.none
+		get {
+            return accessoryType(with: StormLanguageController.shared.currentLanguage, overrideLanguageID: StormLanguageController.shared.overrideLanguage?.languageIdentifier, languageId: languageIdentifier)
+		}
 	}
+    
+    internal func accessoryType(with currentLanguage: String?, overrideLanguageID: String?, languageId: String?) -> UITableViewCell.AccessoryType {
+        guard let currentLanguage = currentLanguage, let languageIdentifier = languageId else {
+            return .none
+        }
+        
+        if let overrideLanguageId = overrideLanguageID, overrideLanguageId == languageIdentifier {
+            return .checkmark
+        } else if languageIdentifier == currentLanguage {
+            return .checkmark
+        }
+        
+        return .none
+    }
 }
