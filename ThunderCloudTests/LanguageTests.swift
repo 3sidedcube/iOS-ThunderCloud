@@ -1,15 +1,15 @@
 //
-//  ThunderCloudTests.swift
+//  LanguageTests.swift
 //  ThunderCloudTests
 //
-//  Created by Joel Trew on 18/09/2017.
+//  Created by Ryan Bourne on 24/07/2019.
 //  Copyright © 2017 threesidedcube. All rights reserved.
 //
 
 import XCTest
 @testable import ThunderCloud
 
-class ThunderCloudTests: XCTestCase {
+class LanguageTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
