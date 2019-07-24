@@ -69,18 +69,18 @@ public extension StormLink {
     }
     
     // Model represenentation of a localised link data, contains the src along with the locale it's specific to
-    struct LocalisedLinkContents {
+    internal struct LocalisedLinkContents {
         
         // Class name, currently always LocalisedLinkDetail
-        var className: String?
+        internal var className: String?
         
         // The source of the url i.e www.3sidedcube.com
-        var destination: URL
+        internal var destination: URL
         
         // The locale identifier with 3 letter language code and optional 3 letter region code, i.e usa_eng or eng
-        var localeIdentifier: String
+        internal var localeIdentifier: String
         
-        init?(from dictionary: [AnyHashable: Any]) {
+        internal init?(from dictionary: [AnyHashable: Any]) {
             
             self.className = dictionary["class"] as? String
             

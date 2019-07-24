@@ -233,3 +233,89 @@ class StormLinkTests: XCTestCase {
     }
     
 }
+
+class LocalisedLinkContentsTests: XCTestCase {
+    
+    static let linkDictionary: [AnyHashable: Any] = [
+        "class": "LocalisedLinkDetail",
+        "src": "https://www.google.fr",
+        "locale": "fra"
+    ]
+    
+    /*
+     Test cases:
+     - empty dictionary, returns nil
+     - no src, returns nil
+     - src is invalid, returns nil
+     - src, no locale, returns nil
+     - has all properties, returns property.
+     */
+    
+    func test_init_emptyDictionary_returnsNil() {
+        let dictionary: StormData = [:]
+        
+        let linkContents = StormLink.LocalisedLinkContents(from: dictionary)
+        
+        XCTAssert(linkContents == nil)
+    }
+    
+    func test_init_noSrc_returnsNil() {
+        let dictionary: StormData = [
+            "class": "LocalisedLinkContents"
+        ]
+        
+        let linkContents = StormLink.LocalisedLinkContents(from: dictionary)
+        
+        XCTAssert(linkContents == nil)
+    }
+    
+    func test_init_invalidSrc_returnsNil() {
+        let dictionary: StormData = [
+            "class": "LocalisedLinkContents",
+            "src": ""
+        ]
+        
+        let linkContents = StormLink.LocalisedLinkContents(from: dictionary)
+        
+        XCTAssert(linkContents == nil)
+    }
+    
+    func test_init_invalidSrc_hasLocale_returnsNil() {
+        let dictionary: StormData = [
+            "class": "LocalisedLinkContents",
+            "src": "",
+            "locale": "eng"
+        ]
+        
+        let linkContents = StormLink.LocalisedLinkContents(from: dictionary)
+        
+        XCTAssert(linkContents == nil)
+    }
+    
+    func test_init_validSrc_noLocale_returnsNil() {
+        let dictionary: StormData = [
+            "class": "LocalisedLinkContents",
+            "src": "google.co.uk",
+        ]
+        
+        let linkContents = StormLink.LocalisedLinkContents(from: dictionary)
+        
+        XCTAssert(linkContents == nil)
+    }
+    
+    func test_init_validDictionary_returnsObject() {
+        let dictionary: StormData = [
+            "class": "LocalisedLinkContents",
+            "src": "google.co.uk",
+            "locale": "eng"
+        ]
+        
+        let linkContents = StormLink.LocalisedLinkContents(from: dictionary)
+        
+        XCTAssert(linkContents != nil)
+        XCTAssert(linkContents)
+    }
+    
+    
+    
+}
