@@ -12,7 +12,7 @@ import ThunderTable
 #warning("Add tests.")
 
 /// `CheckableListItem` is a subclass of `EmbeddedLinksListItem`, it represents a table item that can be checked. It is rendered out as a `EmbeddedLinksInputCheckItemCell`
-class CheckableListItem: EmbeddedLinksListItem {
+public class CheckableListItem: EmbeddedLinksListItem {
 
 	/// The unique identifier of the cell
 	/// This is used for saving the state of the checked cell to UserDefaults
@@ -24,11 +24,11 @@ class CheckableListItem: EmbeddedLinksListItem {
 		checkIdentifier = dictionary["id"] as? Int
 	}
 	
-	override var cellClass: UITableViewCell.Type? {
+    override public var cellClass: UITableViewCell.Type? {
 		return EmbeddedLinksInputCheckItemCell.self
 	}
 	
-	override func configure(cell: UITableViewCell, at indexPath: IndexPath, in tableViewController: TableViewController) {
+    override public func configure(cell: UITableViewCell, at indexPath: IndexPath, in tableViewController: TableViewController) {
 		super.configure(cell: cell, at: indexPath, in: tableViewController)
 		guard let checkCell = cell as? EmbeddedLinksInputCheckItemCell else { return }
 		checkCell.checkView.checkIdentifier = checkIdentifier

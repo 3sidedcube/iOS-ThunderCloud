@@ -9,7 +9,7 @@
 import UIKit
 
 /// An object representation of an image. This class is used to represent one image in an array of possible images that the app can use. The image representation will be used in a lookup after determining the devices screen density
-struct ImageRepresentation {
+public struct ImageRepresentation {
 	
 	/// A link to the image in the bundle
 	let source: StormLink

@@ -47,7 +47,7 @@ class StandardListItemTests: XCTestCase {
     func testAccessoryType_emptyDictionary_returnNone() {
         let item = StandardListItem(dictionary: [:])
         
-        XCTAssertTrue(item.accessoryType == UITableViewCellAccessoryType.none)
+        XCTAssertTrue(item.accessoryType == .none)
     }
     
     /// dictionary with no link, everything but link is set, return .none
@@ -57,14 +57,14 @@ class StandardListItemTests: XCTestCase {
         
         let item = StandardListItem(dictionary: dictionary)
         
-        XCTAssertTrue(item.accessoryType == UITableViewCellAccessoryType.none)
+        XCTAssertTrue(item.accessoryType == .none)
     }
     
     /// dictionary with link with empty url, return .none
     func testAccessoryType_dictionaryWithEmptyURLLink_returnNone() {
         let item = StandardListItem(dictionary: StandardListItemTests.dictionary)
         
-        XCTAssertTrue(item.accessoryType == UITableViewCellAccessoryType.none)
+        XCTAssertTrue(item.accessoryType == .none)
     }
     
     /// dictionary with link with non-empty url, return .disclosureIndicator
@@ -76,7 +76,7 @@ class StandardListItemTests: XCTestCase {
         
         let item = StandardListItem(dictionary: alteredDictionary)
         
-        XCTAssertTrue(item.accessoryType == UITableViewCellAccessoryType.disclosureIndicator)
+        XCTAssertTrue(item.accessoryType == .disclosureIndicator)
     }
     
     /// dictionary with link with nil url, link class is invalid, return .none
@@ -88,10 +88,10 @@ class StandardListItemTests: XCTestCase {
         
         let item = StandardListItem(dictionary: alteredDictionary)
         
-        XCTAssertTrue(item.accessoryType == UITableViewCellAccessoryType.none)
+        XCTAssertTrue(item.accessoryType == .none)
     }
     
-    /// dictionary with link with nil url, link class is sms, return .disclosureIndicator.
+    /// dictionary with link with nil url, link class is sms, return .none.
     func testAccessoryType_dictionaryWithNilURL_linkClassIsSMS_returnDisclosureIndicator() {
         var alteredDictionary = StandardListItemTests.dictionary
         var linkObject = alteredDictionary["link"] as? StormData
@@ -101,10 +101,10 @@ class StandardListItemTests: XCTestCase {
         
         let item = StandardListItem(dictionary: alteredDictionary)
         
-        XCTAssertTrue(item.accessoryType == .disclosureIndicator)
+        XCTAssertTrue(item.accessoryType == .none)
     }
     
-    /// dictionary with link with nil url, link class is emergency, return .disclosureIndicator.
+    /// dictionary with link with nil url, link class is emergency, return .none.
     func testAccessoryType_dictionaryWithNilURL_LinkClassIsEmergency_returnDisclosureIndicator() {
         var alteredDictionary = StandardListItemTests.dictionary
         var linkObject = alteredDictionary["link"] as? StormData
@@ -114,10 +114,10 @@ class StandardListItemTests: XCTestCase {
         
         let item = StandardListItem(dictionary: alteredDictionary)
         
-        XCTAssertTrue(item.accessoryType == .disclosureIndicator)
+        XCTAssertTrue(item.accessoryType == .none)
     }
     
-    /// dictionary with link with nil url, link class is share, return .disclosureIndicator.
+    /// dictionary with link with nil url, link class is share, return .none.
     func testAccessoryType_dictionaryWithNilURL_linkClassIsShare_returnDisclosureIndicator() {
         var alteredDictionary = StandardListItemTests.dictionary
         var linkObject = alteredDictionary["link"] as? StormData
@@ -127,10 +127,10 @@ class StandardListItemTests: XCTestCase {
         
         let item = StandardListItem(dictionary: alteredDictionary)
         
-        XCTAssertTrue(item.accessoryType == .disclosureIndicator)
+        XCTAssertTrue(item.accessoryType == .none)
     }
     
-    /// dictionary with link with nil url, link class is timer, return .disclosureIndicator.
+    /// dictionary with link with nil url, link class is timer, return .none.
     func testAccessoryType_dictionaryWithNilURL_linkClassIsTimer_returnDisclosureIndicator() {
         var alteredDictionary = StandardListItemTests.dictionary
         var linkObject = alteredDictionary["link"] as? StormData
@@ -140,7 +140,7 @@ class StandardListItemTests: XCTestCase {
         
         let item = StandardListItem(dictionary: alteredDictionary)
         
-        XCTAssertTrue(item.accessoryType == .disclosureIndicator)
+        XCTAssertTrue(item.accessoryType == .none)
     }
     
 }

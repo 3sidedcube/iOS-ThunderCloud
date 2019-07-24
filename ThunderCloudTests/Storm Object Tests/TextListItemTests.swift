@@ -56,14 +56,14 @@ class TextListItemTests: XCTestCase {
     func testAccessoryType_returnsNone() {
         let item = TextListItem(dictionary: TextListItemTests.dictionary)
         
-        XCTAssertTrue(item.accessoryType == UITableViewCellAccessoryType.none)
+        XCTAssertTrue(item.accessoryType == UITableViewCell.AccessoryType.none)
     }
     
     /// returns .none
     func testSelectionStyle_returnsNone() {
         let item = TextListItem(dictionary: TextListItemTests.dictionary)
         
-        XCTAssertTrue(item.selectionStyle == UITableViewCellSelectionStyle.none)
+        XCTAssertTrue(item.selectionStyle == UITableViewCell.SelectionStyle.none)
     }
     
     /// returns correct class

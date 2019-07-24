@@ -56,7 +56,7 @@ class CheckableListItemTests: XCTestCase {
     func testAccessoryType_correctTypeIsReturned() {
         let item = CheckableListItem(dictionary: CheckableListItemTests.dictionary)
         
-        XCTAssertTrue(item.accessoryType == UITableViewCellAccessoryType.none)
+        XCTAssertTrue(item.accessoryType == UITableViewCell.AccessoryType.none)
     }
     
     /// correct selectionStyle is returned.

@@ -24,6 +24,18 @@
 		9866593322E86DB8005C1A54 /* LocalisationLanguageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866592D22E86DB7005C1A54 /* LocalisationLanguageTests.swift */; };
 		9866593422E86DB8005C1A54 /* StormLanguageControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866592E22E86DB7005C1A54 /* StormLanguageControllerTests.swift */; };
 		9866593622E86E28005C1A54 /* StormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866593522E86E28005C1A54 /* StormData.swift */; };
+		9866594322E86F30005C1A54 /* LinkCollectionItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866593722E86F30005C1A54 /* LinkCollectionItemTests.swift */; };
+		9866594422E86F30005C1A54 /* AppIdentityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866593822E86F30005C1A54 /* AppIdentityTests.swift */; };
+		9866594522E86F30005C1A54 /* StreamingPagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866593922E86F30005C1A54 /* StreamingPagesTests.swift */; };
+		9866594622E86F30005C1A54 /* TextListItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866593A22E86F30005C1A54 /* TextListItemTests.swift */; };
+		9866594722E86F30005C1A54 /* StormLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866593B22E86F30005C1A54 /* StormLinkTests.swift */; };
+		9866594822E86F30005C1A54 /* VideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866593C22E86F30005C1A54 /* VideoTests.swift */; };
+		9866594922E86F30005C1A54 /* EmbeddedLinksListItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866593D22E86F30005C1A54 /* EmbeddedLinksListItemTests.swift */; };
+		9866594A22E86F30005C1A54 /* ImageRepresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866593E22E86F30005C1A54 /* ImageRepresentationTests.swift */; };
+		9866594B22E86F30005C1A54 /* UnorderedListItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866593F22E86F30005C1A54 /* UnorderedListItemTests.swift */; };
+		9866594C22E86F30005C1A54 /* StandardListItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866594022E86F30005C1A54 /* StandardListItemTests.swift */; };
+		9866594D22E86F30005C1A54 /* CheckableListItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866594122E86F30005C1A54 /* CheckableListItemTests.swift */; };
+		9866594E22E86F30005C1A54 /* AnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866594222E86F30005C1A54 /* AnimationTests.swift */; };
 		B104A4661FA7800800DDBB22 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B104A4651FA7800800DDBB22 /* DummyViewController.swift */; };
 		B104A4681FA7815B00DDBB22 /* NavigationTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B104A4671FA7815B00DDBB22 /* NavigationTabBarViewController.swift */; };
 		B10831A91F06924F008B565D /* AnimatedImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10831A81F06924F008B565D /* AnimatedImageListCell.swift */; };
@@ -242,7 +254,6 @@
 		C2D838551A08E6C100F99FE5 /* UIWindow+TSCWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D838471A08E6C100F99FE5 /* UIWindow+TSCWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2D838561A08E6C100F99FE5 /* UIWindow+TSCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D838481A08E6C100F99FE5 /* UIWindow+TSCWindow.m */; };
 		FF75314D1F7029E300D0BC52 /* ThunderCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C284D46F19C83FC600DA5EE3 /* ThunderCloud.framework */; };
-		FF7531541F702CE300D0BC52 /* StormLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7531531F702CE300D0BC52 /* StormLinkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -301,6 +312,18 @@
 		9866592D22E86DB7005C1A54 /* LocalisationLanguageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalisationLanguageTests.swift; sourceTree = "<group>"; };
 		9866592E22E86DB7005C1A54 /* StormLanguageControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StormLanguageControllerTests.swift; sourceTree = "<group>"; };
 		9866593522E86E28005C1A54 /* StormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StormData.swift; sourceTree = "<group>"; };
+		9866593722E86F30005C1A54 /* LinkCollectionItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkCollectionItemTests.swift; sourceTree = "<group>"; };
+		9866593822E86F30005C1A54 /* AppIdentityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIdentityTests.swift; sourceTree = "<group>"; };
+		9866593922E86F30005C1A54 /* StreamingPagesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingPagesTests.swift; sourceTree = "<group>"; };
+		9866593A22E86F30005C1A54 /* TextListItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextListItemTests.swift; sourceTree = "<group>"; };
+		9866593B22E86F30005C1A54 /* StormLinkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StormLinkTests.swift; sourceTree = "<group>"; };
+		9866593C22E86F30005C1A54 /* VideoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTests.swift; sourceTree = "<group>"; };
+		9866593D22E86F30005C1A54 /* EmbeddedLinksListItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedLinksListItemTests.swift; sourceTree = "<group>"; };
+		9866593E22E86F30005C1A54 /* ImageRepresentationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRepresentationTests.swift; sourceTree = "<group>"; };
+		9866593F22E86F30005C1A54 /* UnorderedListItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnorderedListItemTests.swift; sourceTree = "<group>"; };
+		9866594022E86F30005C1A54 /* StandardListItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardListItemTests.swift; sourceTree = "<group>"; };
+		9866594122E86F30005C1A54 /* CheckableListItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckableListItemTests.swift; sourceTree = "<group>"; };
+		9866594222E86F30005C1A54 /* AnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTests.swift; sourceTree = "<group>"; };
 		B104A4651FA7800800DDBB22 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		B104A4671FA7815B00DDBB22 /* NavigationTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabBarViewController.swift; sourceTree = "<group>"; };
 		B10831A81F06924F008B565D /* AnimatedImageListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageListCell.swift; sourceTree = "<group>"; };
@@ -506,7 +529,6 @@
 		C2D838481A08E6C100F99FE5 /* UIWindow+TSCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TSCWindow.m"; sourceTree = "<group>"; };
 		FF7531481F7029E300D0BC52 /* ThunderCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThunderCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF75314C1F7029E300D0BC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF7531531F702CE300D0BC52 /* StormLinkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StormLinkTests.swift; sourceTree = "<group>"; };
 		FFB956E51F6FE7FA007F3FD1 /* StormLink+Localised.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StormLink+Localised.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -965,6 +987,18 @@
 		983524A922E7604500D97722 /* Storm Object Tests */ = {
 			isa = PBXGroup;
 			children = (
+				9866594222E86F30005C1A54 /* AnimationTests.swift */,
+				9866593822E86F30005C1A54 /* AppIdentityTests.swift */,
+				9866594122E86F30005C1A54 /* CheckableListItemTests.swift */,
+				9866593D22E86F30005C1A54 /* EmbeddedLinksListItemTests.swift */,
+				9866593E22E86F30005C1A54 /* ImageRepresentationTests.swift */,
+				9866593722E86F30005C1A54 /* LinkCollectionItemTests.swift */,
+				9866594022E86F30005C1A54 /* StandardListItemTests.swift */,
+				9866593B22E86F30005C1A54 /* StormLinkTests.swift */,
+				9866593922E86F30005C1A54 /* StreamingPagesTests.swift */,
+				9866593A22E86F30005C1A54 /* TextListItemTests.swift */,
+				9866593F22E86F30005C1A54 /* UnorderedListItemTests.swift */,
+				9866593C22E86F30005C1A54 /* VideoTests.swift */,
 			);
 			path = "Storm Object Tests";
 			sourceTree = "<group>";
@@ -1120,7 +1154,6 @@
 			isa = PBXGroup;
 			children = (
 				FF75314C1F7029E300D0BC52 /* Info.plist */,
-				FF7531531F702CE300D0BC52 /* StormLinkTests.swift */,
 				B11EAEF5219ACC8500891792 /* LocalisedStringTests.swift */,
 				B11EAF5F219AD27700891792 /* ThunderCloudTests.h */,
 				B1BAAD0F2226A67F007F0F61 /* LocalisationLocaleTests.swift */,
@@ -1506,18 +1539,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9866594722E86F30005C1A54 /* StormLinkTests.swift in Sources */,
 				9866593322E86DB8005C1A54 /* LocalisationLanguageTests.swift in Sources */,
 				9866593422E86DB8005C1A54 /* StormLanguageControllerTests.swift in Sources */,
+				9866594822E86F30005C1A54 /* VideoTests.swift in Sources */,
 				B11EAEF6219ACC8500891792 /* LocalisedStringTests.swift in Sources */,
 				9866593222E86DB8005C1A54 /* StormLanguageControllerLocaleTests.swift in Sources */,
+				9866594322E86F30005C1A54 /* LinkCollectionItemTests.swift in Sources */,
+				9866594622E86F30005C1A54 /* TextListItemTests.swift in Sources */,
 				B1BAAD102226A67F007F0F61 /* LocalisationLocaleTests.swift in Sources */,
+				9866594C22E86F30005C1A54 /* StandardListItemTests.swift in Sources */,
+				9866594B22E86F30005C1A54 /* UnorderedListItemTests.swift in Sources */,
+				9866594922E86F30005C1A54 /* EmbeddedLinksListItemTests.swift in Sources */,
+				9866594A22E86F30005C1A54 /* ImageRepresentationTests.swift in Sources */,
 				B11EAF53219AD19D00891792 /* untar.c in Sources */,
+				9866594422E86F30005C1A54 /* AppIdentityTests.swift in Sources */,
+				9866594522E86F30005C1A54 /* StreamingPagesTests.swift in Sources */,
+				9866594D22E86F30005C1A54 /* CheckableListItemTests.swift in Sources */,
 				9866592F22E86DB8005C1A54 /* StormLanguageControllerRightToLeftTests.swift in Sources */,
+				9866594E22E86F30005C1A54 /* AnimationTests.swift in Sources */,
 				9866593122E86DB8005C1A54 /* LanguageTests.swift in Sources */,
 				B1188CFA22C4C9B20017A003 /* AnalyticsTests.swift in Sources */,
 				B11EAF3D219AD02700891792 /* TSCReachability.m in Sources */,
 				9866593022E86DB8005C1A54 /* StormLanguageControllerStringsTests.swift in Sources */,
-				FF7531541F702CE300D0BC52 /* StormLinkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

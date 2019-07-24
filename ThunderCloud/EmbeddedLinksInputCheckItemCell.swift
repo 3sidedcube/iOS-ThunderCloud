@@ -9,7 +9,7 @@
 import UIKit
 
 /// `EmbeddedLinksInputCheckItemCell` is an `EmbeddedLinksListItemCell` that has a checkView for ticking on and off items
-class EmbeddedLinksInputCheckItemCell: EmbeddedLinksListItemCell {
+public class EmbeddedLinksInputCheckItemCell: EmbeddedLinksListItemCell {
 
 	/// The check view for toggling on and off this item
 	@IBOutlet weak var checkView: CheckView!
@@ -19,7 +19,7 @@ class EmbeddedLinksInputCheckItemCell: EmbeddedLinksListItemCell {
 		setup()
 	}
 	
-	override func awakeFromNib() {
+    override public func awakeFromNib() {
 		super.awakeFromNib()
 		setup()
 	}
