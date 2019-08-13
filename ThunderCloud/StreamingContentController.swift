@@ -18,6 +18,14 @@ public class StreamingPagesController: NSObject {
     var requestController: TSCRequestController = TSCRequestController()
     let downloadQueue = OperationQueue()
     
+    static var streamingCacheURL: URL? = {
+        let fileManager = FileManager.default
+        guard let tmpURL = try? fileManager.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: false) else {
+            return nil
+        }
+        return tmpURL.appendingPathComponent("Streaming")
+    }()
+    
     var streamingCacheURL: URL?
     
     override init() {
@@ -38,19 +46,16 @@ public class StreamingPagesController: NSObject {
     func setupDirectories() {
         
         let fileManager = FileManager.default
-        if let tmpURL = try? fileManager.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true) {
+        if let tmpURL = StreamingPagesController.streamingCacheURL {
             
-            let finalURL = tmpURL.appendingPathComponent("Streaming")
-            let pagesURL = finalURL.appendingPathComponent("pages")
-            let contentURL = finalURL.appendingPathComponent("content")
-            let languageURL = finalURL.appendingPathComponent("languages")
+            let pagesURL = tmpURL.appendingPathComponent("pages")
+            let contentURL = tmpURL.appendingPathComponent("content")
+            let languageURL = tmpURL.appendingPathComponent("languages")
             
-            try? fileManager.createDirectory(at: finalURL, withIntermediateDirectories: true, attributes: nil)
+            try? fileManager.createDirectory(at: tmpURL, withIntermediateDirectories: true, attributes: nil)
             try? fileManager.createDirectory(at: pagesURL, withIntermediateDirectories: true, attributes: nil)
             try? fileManager.createDirectory(at: contentURL, withIntermediateDirectories: true, attributes: nil)
             try? fileManager.createDirectory(at: languageURL, withIntermediateDirectories: true, attributes: nil)
-            
-            streamingCacheURL = finalURL
         }
     }
     
@@ -169,7 +174,7 @@ public class StreamingPagesController: NSObject {
             
             var fileOperations = [StreamingContentFileOperation]()
             
-            if let _files = files, let _toDirectory = self.streamingCacheURL {
+            if let _files = files, let _toDirectory = StreamingPagesController.streamingCacheURL {
                 
                 for file in _files {
                     
@@ -180,7 +185,7 @@ public class StreamingPagesController: NSObject {
                 }
             }
             
-            if let _toDirectory = self.streamingCacheURL {
+            if let _toDirectory = StreamingPagesController.streamingCacheURL {
                 
                 //Get language
                 if let _languageString = TSCLanguageController.shared().currentLanguage {
@@ -311,8 +316,9 @@ class StreamingContentFileOperation: CustomOperationBase {
     }
 }
 
-enum streamingError: Error {
+public enum streamingError: Error {
     case failedToLoadRemoteData
     case pageDoesNotExistOrGaveBadData
     case invalidPageURL
+    case pageNotAllocatedAsViewController
 }

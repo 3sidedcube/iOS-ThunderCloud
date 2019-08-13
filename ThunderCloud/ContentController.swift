@@ -998,6 +998,15 @@ public extension ContentController {
         
         var bundleFile: URL?
         var cacheFile: URL?
+        var streamedFile: URL?
+        
+        if let streamedDirectory = StreamingPagesController.streamingCacheURL {
+            if let _inDirectory = inDirectory {
+                streamedFile = streamedDirectory.appendingPathComponent(_inDirectory).appendingPathComponent(forResource).appendingPathExtension(withExtension)
+            } else {
+                streamedFile = streamedDirectory.appendingPathComponent(forResource).appendingPathExtension(withExtension)
+            }
+        }
         
         if let bundleDirectory = bundleDirectory {
             
@@ -1019,7 +1028,9 @@ public extension ContentController {
             }
         }
         
-        if let _cacheFile = cacheFile, FileManager.default.fileExists(atPath: _cacheFile.path) {
+        if let _streamedFile = streamedFile, FileManager.default.fileExists(atPath: _streamedFile.path) {
+            return _streamedFile
+        } else if let _cacheFile = cacheFile, FileManager.default.fileExists(atPath: _cacheFile.path) {
             return _cacheFile
         } else if let _bundleFile = bundleFile, FileManager.default.fileExists(atPath: _bundleFile.path) {
             return _bundleFile
@@ -1053,6 +1064,17 @@ public extension ContentController {
     @objc public func fileNames(inDirectory: String) -> Set<String>? {
         
         var files: Set<String> = []
+        
+        if let streamDirectory = StreamingPagesController.streamingCacheURL {
+            
+            let filePathURL = streamDirectory.appendingPathComponent(inDirectory)
+            do {
+                let contents = try FileManager.default.contentsOfDirectory(atPath: filePathURL.path)
+                contents.forEach({ files.insert($0) })
+            } catch let error {
+                print("error getting files in streaming files directory: \(error.localizedDescription)")
+            }
+        }
         
         if let deltaDirectory = deltaDirectory {
             
@@ -1098,6 +1120,13 @@ public extension ContentController {
         if let bundleDirectory = bundleDirectory {
             let fileBundlePath = "\(bundleDirectory)/\(file)"
             if (FileManager.default.fileExists(atPath: fileBundlePath)) {
+                return true
+            }
+        }
+        
+        if let streamDirectory = StreamingPagesController.streamingCacheURL {
+            let fileStreamedPath = streamDirectory.appendingPathComponent(file).path
+            if FileManager.default.fileExists(atPath: fileStreamedPath) {
                 return true
             }
         }
