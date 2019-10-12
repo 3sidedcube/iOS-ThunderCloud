@@ -8,6 +8,7 @@
 
 import UIKit
 import ThunderBasics
+import os.log
 
 /// A block which is called when a native link is clicked in the App
 ///
@@ -22,6 +23,8 @@ public typealias NativeLinkHandler = (_ name: String, _ navigationController: UI
 public class StormGenerator: NSObject {
     
     public static let shared = StormGenerator()
+    
+    private static let generatorLog = OSLog(subsystem: "com.threesidedcube.ThunderCloud", category: "StormGenerator")
     
     //MARK: - View Controllers -
     
@@ -44,10 +47,22 @@ public class StormGenerator: NSObject {
         
         let pageMetaDataDictionary = ContentController.shared.metadataForPage(withName: name)
         
-        if let _pageMetaDataDictionary = pageMetaDataDictionary, let pageSrc = _pageMetaDataDictionary["src"] as? String, let pageURL = URL(string: pageSrc) {
-            return StormGenerator.viewController(URL: pageURL)
+        guard let _pageMetaDataDictionary = pageMetaDataDictionary else {
+            os_log("Failed to get metadata from bundle for page with name: %@", log: StormGenerator.generatorLog, type: .debug, name)
+            return nil
         }
-        return nil
+        
+        guard let pageSrc = _pageMetaDataDictionary["src"] as? String else {
+            os_log("Page metadata doesn't contain 'src' property", log: StormGenerator.generatorLog, type: .debug)
+            return nil
+        }
+        
+        guard let pageURL = URL(string: pageSrc) else {
+            os_log("Page metadata's 'src' property (%@) is not a valid url", log: StormGenerator.generatorLog, type: .debug)
+            return nil
+        }
+        
+        return StormGenerator.viewController(URL: pageURL)
     }
     
     /// Turns a storm page name (Internal system name) into a core spotlight indexable item
@@ -55,6 +70,7 @@ public class StormGenerator: NSObject {
     /// - Returns: An optional `CoreSpotlightIndexable` object that can be used to represent the given page
     class func indexableObjectForViewControllerWith(name: String) -> CoreSpotlightIndexable? {
         guard let indexableClass = StormGenerator.shared.indexableClassLookupDictionary[name] else {
+            os_log("No indexable class for view controller with name: (%@)", log: StormGenerator.generatorLog, type: .info)
             return nil
         }
         return indexableClass.init(dictionary: [:]) as? CoreSpotlightIndexable
@@ -73,6 +89,7 @@ public class StormGenerator: NSObject {
     public class func viewController(nativePageName: String) -> UIViewController? {
         
         guard let object = StormGenerator.shared.nativePageLookupDictionary[nativePageName] else {
+            os_log("No registered view controller for native page with name: (%@)", log: StormGenerator.generatorLog, type: .info)
             return nil
         }
         
@@ -114,6 +131,7 @@ public class StormGenerator: NSObject {
     public class func viewController(URL: URL) -> UIViewController? {
         
         guard let type = URL.host else {
+            os_log("No host provided on view controller URL", log: StormGenerator.generatorLog, type: .error)
             return nil
         }
         
@@ -121,10 +139,12 @@ public class StormGenerator: NSObject {
         case "pages":
             
             guard let pageURL = ContentController.shared.url(forCacheURL: URL) else {
+                os_log("Failed to get url for page cache url (%@)", log: StormGenerator.generatorLog, type: .error, URL.absoluteString)
                 return nil
             }
             
             guard let pageData = try? Data(contentsOf: pageURL), let jsonObject = (try? JSONSerialization.jsonObject(with: pageData, options: [])) as? [AnyHashable: Any] else {
+                os_log("Failed to parse page url (%@) as JSON", log: StormGenerator.generatorLog, type: .error, pageURL.absoluteString)
                 return nil
             }
             
