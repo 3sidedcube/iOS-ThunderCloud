@@ -104,11 +104,7 @@ public extension UINavigationController {
 			
 		} else if scheme == "http" || scheme == "https" || (link.url != nil && link.url!.absoluteString.hasPrefix("www")) {
 			
-			if host == "www.youtube.com" {
-				handleYouTubeVideo(link: link)
-			} else {
-				handleWeb(link: link)
-			}
+            handleWeb(link: link)
 			
 		} else if link.linkClass == .sms {
 			
