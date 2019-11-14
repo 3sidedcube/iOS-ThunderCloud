@@ -192,6 +192,8 @@ open class QuizQuestionContainerViewController: AccessibilityRefreshingViewContr
         // Intercept the interactivePopGestureRecognizer delegate so we can disable swipe back if happened in the region of a quiz slider
         navigationController?.interactivePopGestureRecognizer?.delegate = self;
         
+        UIAccessibility.post(notification: .screenChanged, argument: questionLabel)
+        
         NotificationCenter.default.sendAnalyticsScreenView(
             Analytics.ScreenView(
                 screenName: "quiz_question",
