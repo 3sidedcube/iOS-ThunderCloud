@@ -265,6 +265,8 @@ open class QuizCompletionViewController: TableViewController {
             )
         )
         
+        UIAccessibility.post(notification: .screenChanged, argument: quiz.answeredCorrectly ? achievementDisplayView : tableView.cellForRow(at: IndexPath(row: 0, section: 0)))
+        
         guard quiz.answeredCorrectly else { return }
         
         // Must occur in this order
