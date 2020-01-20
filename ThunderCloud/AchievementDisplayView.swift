@@ -84,7 +84,7 @@ open class AchievementDisplayView: UIView, AchievementDisplayable {
         super.layoutSubviews()
         
         badgeImageView.center = CGPoint(x: frame.width/2, y: frame.height/2)
-        badgeImageView.backgroundColor = .white
+        badgeImageView.backgroundColor = ThemeManager.shared.theme.backgroundColor
         badgeImageView.cornerRadius = badgeImageView.bounds.width/2
         
         let availableSize = CGSize(width: frame.size.width - AchievementDisplayView.contentEdgePadding.left - AchievementDisplayView.contentEdgePadding.right, height: CGFloat.greatestFiniteMagnitude)
@@ -111,6 +111,7 @@ open class AchievementDisplayView: UIView, AchievementDisplayable {
         
         titleLabel.font = ThemeManager.shared.theme.dynamicFont(ofSize: 17, textStyle: .body)
         titleLabel.textColor = ThemeManager.shared.theme.secondaryLabelColor
+        badgeImageView.backgroundColor = ThemeManager.shared.theme.backgroundColor
         
         subtitleLabel.font = titleLabel.font
         subtitleLabel.textColor = titleLabel.textColor
