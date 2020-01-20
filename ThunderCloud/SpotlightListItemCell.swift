@@ -229,7 +229,13 @@ open class SpotlightListItemCell: StormTableViewCell {
         spotlightCell.contentView.clipsToBounds = false
         
         spotlightCell.shadowView.shadowColor = UIColor(named: "spotlightShadow", in: Bundle(for: SpotlightListItem.self), compatibleWith: nil)
-
+        if #available(iOS 13.0, *) {
+            spotlightCell.containerView.borderColor = .opaqueSeparator
+            spotlightCell.imageView.borderColor = .opaqueSeparator
+        } else {
+            spotlightCell.containerView.borderColor = UIColor(white: 0.761, alpha: 1.0)
+            spotlightCell.imageView.borderColor = UIColor(white: 0.761, alpha: 1.0)
+        }
         
         if let link = spotlight.link {
             spotlightCell.accessibilityTraits = link.accessibilityTraits
