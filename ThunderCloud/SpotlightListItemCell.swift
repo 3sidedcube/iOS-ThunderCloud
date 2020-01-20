@@ -228,7 +228,7 @@ open class SpotlightListItemCell: StormTableViewCell {
         spotlightCell.clipsToBounds = false
         spotlightCell.contentView.clipsToBounds = false
         
-        spotlightCell.shadowView.shadowColor = UIColor(named: "spotlightShadow")
+        spotlightCell.shadowView.shadowColor = UIColor(named: "spotlightShadow", in: Bundle(for: SpotlightListItem.self))
 
         
         if let link = spotlight.link {
