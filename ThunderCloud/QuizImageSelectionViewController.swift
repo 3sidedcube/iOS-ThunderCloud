@@ -35,7 +35,7 @@ extension ImageOption: CollectionItemDisplayable {
         
         var textAttributes: [NSAttributedString.Key : Any] = [
             .font: ThemeManager.shared.theme.dynamicFont(ofSize: 15, textStyle: .body, weight: cell.isSelected ? .bold : .regular),
-            .foregroundColor: cell.isSelected ? .white : ThemeManager.shared.theme.darkGrayColor
+            .foregroundColor: cell.isSelected ? .white : ThemeManager.shared.theme.secondaryLabelColor
         ]
         
         if UIAccessibility.buttonShapesEnabled {

@@ -50,7 +50,7 @@ open class AchievementDisplayView: UIView, AchievementDisplayable {
         titleLabel.text = "Congratulations".localised(with: "_QUIZ_WIN_CONGRATULATION")
         titleLabel.textAlignment = .center
         titleLabel.font = ThemeManager.shared.theme.dynamicFont(ofSize: 17, textStyle: .body)
-        titleLabel.textColor = ThemeManager.shared.theme.darkGrayColor
+        titleLabel.textColor = ThemeManager.shared.theme.secondaryLabelColor
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byWordWrapping
         addSubview(titleLabel)
@@ -110,7 +110,7 @@ open class AchievementDisplayView: UIView, AchievementDisplayable {
     func accessibilitySettingsDidChange() {
         
         titleLabel.font = ThemeManager.shared.theme.dynamicFont(ofSize: 17, textStyle: .body)
-        titleLabel.textColor = ThemeManager.shared.theme.darkGrayColor
+        titleLabel.textColor = ThemeManager.shared.theme.secondaryLabelColor
         
         subtitleLabel.font = titleLabel.font
         subtitleLabel.textColor = titleLabel.textColor

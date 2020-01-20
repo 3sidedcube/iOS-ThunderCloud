@@ -158,8 +158,8 @@ open class QuizQuestionContainerViewController: AccessibilityRefreshingViewContr
         continueButton.cornerRadius = 6.0
         
         selectedLabel.font = ThemeManager.shared.theme.dynamicFont(ofSize: 11, textStyle: .footnote, weight: .medium)
-        selectedLabel.textColor = ThemeManager.shared.theme.darkGrayColor
-        hintLabel.textColor = ThemeManager.shared.theme.darkGrayColor
+        selectedLabel.textColor = ThemeManager.shared.theme.secondaryLabelColor
+        hintLabel.textColor = ThemeManager.shared.theme.secondaryLabelColor
         
         headerScrollView.alwaysBounceVertical = false
         
@@ -271,8 +271,8 @@ open class QuizQuestionContainerViewController: AccessibilityRefreshingViewContr
         continueButton.solidMode = answered
         continueButton.useBorderColor = !answered
         continueButton.borderColor = ThemeManager.shared.theme.lightGrayColor
-        continueButton.primaryColor = answered ? ThemeManager.shared.theme.mainColor : ThemeManager.shared.theme.darkGrayColor
-        continueButton.secondaryColor = answered ? ThemeManager.shared.theme.whiteColor : ThemeManager.shared.theme.darkGrayColor
+        continueButton.primaryColor = answered ? ThemeManager.shared.theme.mainColor : ThemeManager.shared.theme.secondaryLabelColor
+        continueButton.secondaryColor = answered ? ThemeManager.shared.theme.whiteColor : ThemeManager.shared.theme.secondaryLabelColor
     }
     
     open func titleView() -> UIView? {
@@ -404,8 +404,8 @@ open class QuizQuestionContainerViewController: AccessibilityRefreshingViewContr
         redrawContinueButton()
         
         selectedLabel.font = ThemeManager.shared.theme.dynamicFont(ofSize: 11, textStyle: .footnote, weight: .medium)
-        selectedLabel.textColor = ThemeManager.shared.theme.darkGrayColor
-        hintLabel.textColor = ThemeManager.shared.theme.darkGrayColor
+        selectedLabel.textColor = ThemeManager.shared.theme.secondaryLabelColor
+        hintLabel.textColor = ThemeManager.shared.theme.secondaryLabelColor
     }
 }
 

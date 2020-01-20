@@ -128,7 +128,7 @@ open class CollectionItemViewCell: UICollectionViewCell {
         imageContainerView.alpha = enabled ? 1.0 : 0.44
         titleLabel.font = ThemeManager.shared.theme.dynamicFont(ofSize: 13, textStyle: .footnote, weight: enabled ? .bold : .regular)
         titleContainerView.backgroundColor = enabled ? ThemeManager.shared.theme.mainColor : .clear
-        titleLabel.textColor = enabled ? ThemeManager.shared.theme.whiteColor : ThemeManager.shared.theme.darkGrayColor
+        titleLabel.textColor = enabled ? ThemeManager.shared.theme.whiteColor : ThemeManager.shared.theme.secondaryLabelColor
     }
     
     open override var isAccessibilityElement: Bool {

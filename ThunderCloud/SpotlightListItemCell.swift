@@ -258,7 +258,7 @@ open class SpotlightListItemCell: StormTableViewCell {
             spotlightCell.titleLabel.text = nil
         }
         
-        spotlightCell.categoryLabel.textColor = ThemeManager.shared.theme.darkGrayColor
+        spotlightCell.categoryLabel.textColor = ThemeManager.shared.theme.secondaryLabelColor
         spotlightCell.categoryLabel.font = ThemeManager.shared.theme.dynamicFont(ofSize: 10, textStyle: .footnote, weight: .semibold)
         
         // Keep track of this because of our sneaky hack of not actually hiding the category label when it has empty text
@@ -281,7 +281,7 @@ open class SpotlightListItemCell: StormTableViewCell {
             
             spotlightCell.descriptionLabel.isHidden = false
             spotlightCell.descriptionLabel.text = description
-            spotlightCell.descriptionLabel.textColor = ThemeManager.shared.theme.darkGrayColor
+            spotlightCell.descriptionLabel.textColor = ThemeManager.shared.theme.secondaryLabelColor
             spotlightCell.descriptionLabel.font = ThemeManager.shared.theme.dynamicFont(ofSize: 13, textStyle: .subheadline)
             
         } else {

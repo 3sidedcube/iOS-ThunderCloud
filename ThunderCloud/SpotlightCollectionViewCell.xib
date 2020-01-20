@@ -69,7 +69,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="gb0-OI-Rkd" secondAttribute="trailing" id="3X8-qf-isi"/>
                                     <constraint firstItem="gb0-OI-Rkd" firstAttribute="top" secondItem="eG8-su-A5F" secondAttribute="top" id="PDe-Yz-0G7"/>
@@ -78,7 +78,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="eG8-su-A5F" secondAttribute="trailing" id="8g7-ie-u23"/>
                             <constraint firstItem="eG8-su-A5F" firstAttribute="leading" secondItem="Vba-LM-dIX" secondAttribute="leading" id="MOz-aK-XHt"/>
