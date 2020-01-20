@@ -155,4 +155,9 @@ open class CollectionItemViewCell: UICollectionViewCell {
             
         }
     }
+    
+    open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        imageView.backgroundColor = ThemeManager.shared.theme.backgroundColor
+    }
 }
