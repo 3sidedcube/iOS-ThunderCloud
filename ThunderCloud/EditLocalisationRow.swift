@@ -52,7 +52,11 @@ class EditLocalisationRow: InputTextViewRow {
 		
 		let languageDirection = Locale.characterDirection(forLanguage: languageCode)
 		editLocalisationCell.textView.textAlignment = languageDirection == .rightToLeft ? .right : .left
-        editLocalisationCell.backgroundView?.backgroundColor = .systemGroupedBackground
+        if #available(iOS 13.0, *) {
+            editLocalisationCell.backgroundView?.backgroundColor = .systemGroupedBackground
+        } else {
+            editLocalisationCell.backgroundView?.backgroundColor = .white
+        }
 	}
 	
 	override var selectionStyle: UITableViewCell.SelectionStyle? {
