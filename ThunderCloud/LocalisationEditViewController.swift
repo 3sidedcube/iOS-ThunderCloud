@@ -92,7 +92,25 @@ public class LocalisationEditViewController: TableViewController {
 		
 		super.viewDidLoad()
 		
-		view.backgroundColor = UIColor(hexString: "E2E9F0")
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = UIColor(hexString: "E2E9F0")
+        }
+        
+        if #available(iOS 13.0, *) {
+            
+            let navAppearance = UINavigationBarAppearance()
+            
+            navAppearance.backgroundColor = .systemBackground
+            navAppearance.titleTextAttributes = [
+                .foregroundColor: UIColor.label
+            ]
+            
+            navigationController?.navigationBar.standardAppearance = navAppearance
+        }
+        
+        
 		
 		navigationController?.navigationBar.barTintColor = .white
 		navigationController?.navigationBar.tintColor = .white
@@ -197,4 +215,13 @@ public class LocalisationEditViewController: TableViewController {
 		dismissAnimated()
 		delegate?.editingCancelled(in: self)
 	}
+    
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = UIColor(hexString: "E2E9F0")
+        }
+    }
 }

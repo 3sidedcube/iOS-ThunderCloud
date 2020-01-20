@@ -35,16 +35,23 @@ class EditLocalisationTableViewCell: InputTextViewCell {
 		backgroundColor = .clear
 		
 		backgroundView = TSCView()
-		backgroundView?.backgroundColor = .white
 		backgroundView?.borderWidth = 1/UIScreen.main.scale
-		backgroundView?.borderColor = UIColor(hexString: "9B9B9B")
+        if #available(iOS 13.0, *) {
+            backgroundView?.borderColor = .separator
+        } else {
+            backgroundView?.borderColor = UIColor(hexString: "9B9B9B")
+        }
 		backgroundView?.cornerRadius = 2.0
 		
 		contentView.addSubview(backgroundView!)
 		contentView.sendSubviewToBack(backgroundView!)
 		
 		separatorView = TSCView()
-		separatorView?.backgroundColor = UIColor(hexString: "9B9B9B")
+        if #available(iOS 13.0, *) {
+            separatorView?.backgroundColor = .separator
+        } else {
+            separatorView?.backgroundColor = UIColor(hexString: "9B9B9B")
+        }
 		backgroundView!.addSubview(separatorView!)
 	}
 	
@@ -58,4 +65,18 @@ class EditLocalisationTableViewCell: InputTextViewCell {
 		}
 		separatorView?.frame = CGRect(x: cellTextLabelContainer.frame.maxX, y: 0, width: 1/UIScreen.main.scale, height: backgroundView?.frame.height ?? 0)
 	}
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if #available(iOS 13.0, *) {
+            backgroundView?.borderColor = .separator
+        } else {
+            backgroundView?.borderColor = UIColor(hexString: "9B9B9B")
+        }
+        if #available(iOS 13.0, *) {
+            separatorView?.backgroundColor = .separator
+        } else {
+            separatorView?.backgroundColor = UIColor(hexString: "9B9B9B")
+        }
+    }
 }

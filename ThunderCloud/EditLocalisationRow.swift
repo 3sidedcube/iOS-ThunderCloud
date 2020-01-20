@@ -52,6 +52,7 @@ class EditLocalisationRow: InputTextViewRow {
 		
 		let languageDirection = Locale.characterDirection(forLanguage: languageCode)
 		editLocalisationCell.textView.textAlignment = languageDirection == .rightToLeft ? .right : .left
+        editLocalisationCell.backgroundView?.backgroundColor = .systemGroupedBackground
 	}
 	
 	override var selectionStyle: UITableViewCell.SelectionStyle? {
