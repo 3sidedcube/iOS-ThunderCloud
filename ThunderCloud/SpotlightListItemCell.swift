@@ -203,8 +203,7 @@ open class SpotlightListItemCell: StormTableViewCell {
         let nib = UINib(nibName: "SpotlightCollectionViewCell", bundle: Bundle(for: SpotlightListItemCell.self))
         collectionView.register(nib, forCellWithReuseIdentifier: "SpotlightCell")
         
-        pageIndicator.currentPageIndicatorTintColor = .black
-        pageIndicator.pageIndicatorTintColor = ThemeManager.shared.theme.grayColor
+        updatePageIndicatorColours()
     }
     
     override open func layoutSubviews() {
@@ -335,6 +334,21 @@ open class SpotlightListItemCell: StormTableViewCell {
 
             return _accessibilityElements
         }
+    }
+    
+    private func updatePageIndicatorColours() {
+        pageIndicator.pageIndicatorTintColor = ThemeManager.shared.theme.grayColor
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+            pageIndicator.currentPageIndicatorTintColor = .white
+        default:
+            pageIndicator.currentPageIndicatorTintColor = .black
+        }
+    }
+    
+    open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        updatePageIndicatorColours()
     }
 }
 
