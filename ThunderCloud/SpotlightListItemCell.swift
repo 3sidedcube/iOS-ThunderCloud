@@ -47,7 +47,6 @@ public class SpotlightCollectionViewCell: UICollectionViewCell {
         
         shadowView.shadowRadius = 15.0
         shadowView.shadowOpacity = 0.5
-        shadowView.shadowColor = UIColor(red: 212.0/255.0, green: 212.0/255.0, blue: 212.0/255.0, alpha: 1.0)
     }
     
     /// Calculates the size of the spotlight list item for the given spotlight
@@ -228,6 +227,9 @@ open class SpotlightListItemCell: StormTableViewCell {
         spotlightCell.imageView.isHidden = spotlight.image?.image == nil
         spotlightCell.clipsToBounds = false
         spotlightCell.contentView.clipsToBounds = false
+        
+        spotlightCell.shadowView.shadowColor = UIColor(named: "spotlightShadow")
+
         
         if let link = spotlight.link {
             spotlightCell.accessibilityTraits = link.accessibilityTraits

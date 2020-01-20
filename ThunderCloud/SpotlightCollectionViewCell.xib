@@ -57,7 +57,7 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="psp-Mk-R8G" secondAttribute="trailing" constant="14" id="3Jd-xi-ZR6"/>
                                                     <constraint firstItem="psp-Mk-R8G" firstAttribute="leading" secondItem="TTI-cS-okl" secondAttribute="leading" constant="14" id="6OD-zw-X3L"/>
