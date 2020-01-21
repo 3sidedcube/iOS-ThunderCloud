@@ -329,16 +329,26 @@ class DownloadingStormBundleViewController: UIViewController {
     
     @IBAction func handleRetry(_ sender: Any) {
         
-        downloadingIndicator.backgroundColor = UIColor.clear
-        downloadingIndicator.borderColor = UIColor.lightGray
-        unpackingIndicator.backgroundColor = UIColor.clear
-        unpackingIndicator.borderColor = UIColor.lightGray
-        verifyingIndicator.backgroundColor = UIColor.clear
-        verifyingIndicator.borderColor = UIColor.lightGray
-        copyingIndicator.backgroundColor = UIColor.clear
-        copyingIndicator.borderColor = UIColor.lightGray
-        cleaningUpIndicator.backgroundColor = UIColor.clear
-        cleaningUpIndicator.borderColor = UIColor.lightGray
+        downloadingIndicator.backgroundColor = .clear
+        unpackingIndicator.backgroundColor = .clear
+        verifyingIndicator.backgroundColor = .clear
+        copyingIndicator.backgroundColor = .clear
+        cleaningUpIndicator.backgroundColor = .clear
+        
+        if #available(iOS 13.0, *) {
+            copyingIndicator.borderColor = .opaqueSeparator
+            verifyingIndicator.borderColor = .opaqueSeparator
+            unpackingIndicator.borderColor = .opaqueSeparator
+            downloadingIndicator.borderColor = .opaqueSeparator
+            cleaningUpIndicator.borderColor = .opaqueSeparator
+        } else {
+            copyingIndicator.borderColor = .lightGray
+            verifyingIndicator.borderColor = .lightGray
+            unpackingIndicator.borderColor = .lightGray
+            downloadingIndicator.borderColor = .lightGray
+            cleaningUpIndicator.borderColor = .lightGray
+        }
+        
         
         preparingIndicator.backgroundColor = UIColor(hexString: inProgressFillHex)
         preparingIndicator.borderColor = UIColor(hexString: inProgressBorderHex)
@@ -353,6 +363,27 @@ class DownloadingStormBundleViewController: UIViewController {
         progressView.tintColor = UIColor(hexString: "#4A90E2")
         
         startDownloading()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateColours()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        updateColours()
+    }
+    
+    private func updateColours() {
+        
+        if #available(iOS 13.0, *) {
+            progressView.trackTintColor = .systemGray4
+            progressView.backgroundColor = .systemGray4
+        } else {
+            progressView.trackTintColor = .lightGray
+            progressView.backgroundColor = .lightGray
+        }
     }
     
     private let inProgressBorderHex = "#D6911D"
